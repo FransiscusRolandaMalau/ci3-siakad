@@ -1,0 +1,9 @@
+{
+    "/public/css/theme-admin.css": "/public/css/theme-admin.css",
+    "/public/css/theme-auth.css": "/public/css/theme-auth.css",
+    "/public/css/layouts-admin.css": "/public/css/layouts-admin.css",
+    "/public/css/datatables-admin.css": "/public/css/datatables-admin.css",
+    "/public/js/theme-admin.js": "/public/js/theme-admin.js",
+    "/public/js/theme-auth.js": "/public/js/theme-auth.js",
+    "/public/js/datatables-admin.js": "/public/js/datatables-admin.js"
+}
