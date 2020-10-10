@@ -2,22 +2,46 @@
 
 class Jurusan_model extends CI_Model
 {
-	protected $model;
-	public function __construct()
+	private $model = "jurusan";
+
+	public function rules()
 	{
-		parent::__construct();
-		$this->model = 'jurusan';
+		return [
+			[
+				'field' => 'kode_jurusan',
+				'label' => 'Kode Jurusan',
+				'rules' => 'required'
+			],
+			[
+				'field' => 'nama_jurusan',
+				'label' => 'Nama Jurusan',
+				'rules' => 'required'
+			],
+		];
 	}
 
-	public function get_all_jurusan()
+	public function getAll()
 	{
-		// $query = $this->db->query("SELECT * FROM jurusan ORDER BY id_jurusan DESC");
-		// return $query->result_array();
-		return $this->db->get($this->model)->result_array();
+		return $this->db->query("SELECT * FROM jurusan ORDER BY id_jurusan DESC")->result_array();
 	}
 
-	public function get_jurusan_id($id)
+	public function getById($id)
 	{
-		return $this->db->query('SELECT id FROM jurusan');
+		return $this->db->query("SELECT * FROM jurusan WHERE id = $id")->row_array();
+	}
+
+	public function save()
+	{
+
+	}
+
+	public function update()
+	{
+
+	}
+
+	public function delete($id_jurusan)
+	{
+		return $this->db->query("DELETE FROM jurusan WHERE id_jurusan = $id_jurusan");
 	}
 }

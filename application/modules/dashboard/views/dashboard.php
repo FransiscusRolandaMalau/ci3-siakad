@@ -1,6 +1,6 @@
 <div class="alert alert-success mb-5 p-5" role="alert">
     <h4 class="alert-heading">Selamat Datang!</h4>
-    <p>Selamat datang <strong><?= $name ;?></strong> di Sistem Informasi Akademik Universitas CKI Indonesia, Anda login sebagai <strong><?= $level ;?></strong>.</p>
+    <p>Selamat datang <strong><?= $this->session->userdata['name']; ?></strong> di Sistem Informasi Akademik Universitas CKI Indonesia, Anda login sebagai <strong><?= $this->session->userdata['level']; ?></strong>.</p>
     <div class="border-bottom border-white opacity-20 mb-5"></div>
     <button href="#" class="btn btn-light mb-0" data-toggle="modal" data-target="#exampleModal">
 		<i class="flaticon-cogwheel-1"></i> Control Panel

@@ -1,10 +1,14 @@
 const datatableServices = {
 	datatable: function(container, url){
-		$(container).dataTable({
+		$(container).DataTable({
 			'responsive': true,
 			'searchDelay': 500,
 			'processing': true,
-			'ajax': url
+			'ajax': {
+                "url": url,
+				"type": "GET",
+				"dataType": "JSON",
+            },
 		})
 	}
 }

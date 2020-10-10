@@ -2,45 +2,51 @@
 
 class Auth_model extends CI_Model
 {
-	public function __construct()
+	protected $table = "users"; 
+	
+	public function doLogin()
 	{
-		parent:: __construct();
-		$this->data = 'users';
-	}
-	public function cek_login($username)
-	{
-		$query = $this->db->where('username', $username)->limit(1)->get('users');
-		if ($query->num_rows() > 0) {
-			$hasil = $query->row_array();
-		} else {
-			$hasil = array();
-		}
-		return $hasil;
-	}
+		$post = $this->input->post();
 
-	public function get_login_data($user, $pass)
-	{
-		$u = $user;
-		$p = password_hash($pass, PASSWORD_BCRYPT);
+		// cari user berdasarkan email dan username
+		$this->db->where('email', $post["email"])
+				->or_where('username', $post["email"]);
+		$user = $this->db->get($this->table)->row();
 
-		$query_cek_login = $this->db->get_where('users', array('username' => $u, 'password' => $p));
+		// jika user terdaftar
+		if ($user) {
+			// cek password
+			$isPasswordTrue = password_verify($post["password"], $user->password);
+			// cek levelnya
+			$isAdmin = $user->level == "admin";
 
-		if (count($query_cek_login->result()) > 0) {
-			foreach ($query_cek_login->result() as $value) {
-				foreach ($query_cek_login->result() as $value) {
-					$sess_data['logged_in'] = TRUE;
-					$sess_data['username'] = $value->username;
-					$sess_data['password'] = $value->password;
-					$sess_data['level'] = $value->level;
-					$this->session->set_userdata($sess_data);
-				}
-				redirect(base_url().'dashboard');
+			// jika password benar dan dia admin
+			if ($isPasswordTrue && $isAdmin) {
+				// login success
+				$this->session->set_userdata(['username' => $user->username]);
+				$this->session->set_userdata(['name' => $user->name]);
+				$this->session->set_userdata(['level' => $user->level]);
+				$this->session->set_userdata(['email' => $user->email]);
+				$this->session->set_userdata(['profile_photo' => $user->profile_photo]);
+				$this->updateLastLogin($user->id);
+				return TRUE;
 			}
-		} else {
-			$this->session->set_flashdata('flash', 'Username atau Password Salah');
-			redirect(base_url().'login');
 		}
+
+		return FALSE;
 	}
+
+	public function isNotLogin()
+	{
+		return $this->session->userdata('user_logged') === NULL;
+	}
+
+	public function updateLastLogin($id)
+	{
+		$sql = "UPDATE {$this->table} SET last_login=now() WHERE id={$id}";
+		$this->db->query($sql);
+	}
+	
 
 	public function register($table, $data)
 	{

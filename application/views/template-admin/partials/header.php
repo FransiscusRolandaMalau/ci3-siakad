@@ -32,18 +32,18 @@
             <div class="dropdown">
                 <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
                     <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
-                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Ndo Malau</span>
+                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?= $this->session->userdata['name']; ?></span>
                         <span class="symbol symbol-35 symbol-light-success">
-                            <img src="<?= base_url() ;?>public/img/logo.jpg" alt="Profile Images">
+                            <img src="<?= base_url() ;?>public/img/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
                         </span>
                     </div>
                 </div>
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
                     <div class="d-flex align-items-center p-8 rounded-top">
                         <div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-                            <img src="<?= base_url() ;?>public/img/logo.jpg" alt="Profile Images">
+                            <img src="<?= base_url() ;?>public/img/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
                         </div>
-                        <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">Ndo Malau</div>
+                        <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5"><?= $this->session->userdata['name']; ?></div>
                     </div>
                     <div class="separator separator-solid"></div>
                     <div class="navi navi-spacer-x-0 pt-5">
@@ -60,9 +60,9 @@
                         </a>
                         <div class="navi-separator mt-3"></div>
                         <div class="navi-footer px-8 py-5">
-                            <a href="<?= base_url().'auth/logout' ;?>" class="btn btn-light-primary btn-block font-weight-bold">
+                            <button class="btn btn-light-primary btn-block font-weight-bold" data-toggle="modal" data-target="#logout">
                                 Logout
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -71,3 +71,22 @@
     </div>
 </div>
 
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Ready to Leave?</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i aria-hidden="true" class="ki ki-close"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Select "Logout" below if you are ready to end your current session.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				<a href="<?= base_url().'auth/logout' ;?>" class="btn btn-primary">Logout</a>
+			</div>
+		</div>
+    </div>
+</div>

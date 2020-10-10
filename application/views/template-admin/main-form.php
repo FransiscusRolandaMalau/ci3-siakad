@@ -6,7 +6,6 @@
 		redirect(base_url().'auth/login');
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -37,7 +36,9 @@
                     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                         <div class="d-flex flex-column-fluid">
                             <div class="container">
-                                <?= $content ;?>
+								<div class="card card-custom card-sticky" id="kt_page_sticky_card">
+									<?= $content ;?>
+								</div>
                             </div>
                         </div>
                      </div>

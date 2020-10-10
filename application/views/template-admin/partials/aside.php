@@ -17,7 +17,7 @@
                     <h4 class="menu-text">Menu Akademik</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                 </li>
-                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item menu-item-submenu <?= $this->uri->segment(1) == 'jurusan' ? 'menu-item-open' : '' ?> " aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon-imac"></i>
                         <span class="menu-text">Akademik</span>

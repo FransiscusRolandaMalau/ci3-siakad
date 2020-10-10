@@ -6,7 +6,6 @@
 		redirect(base_url().'auth/login');
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,8 +18,9 @@
 		<!-- Favicon -->
 
 		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-		
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!-- Fonts -->
+		<link href="<?= base_url(mix('css/datatables-admin.css')); ?>" rel="stylesheet" type="text/css" />
         <!-- Theme Styles -->
         <link href="<?= base_url(mix('css/theme-admin.css')); ?>" rel="stylesheet" type="text/css" />
 
@@ -37,7 +37,9 @@
                     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                         <div class="d-flex flex-column-fluid">
                             <div class="container">
-                                <?= $content ;?>
+								<div class="card card-custom">
+									<?= $content ;?>
+								</div>
                             </div>
                         </div>
                      </div>
@@ -110,5 +112,37 @@
 
     <!-- Theme JS Bundle -->
     <script src="<?= base_url(mix('js/theme-admin.js')); ?>"></script>
+    <script src="<?= base_url(mix('js/datatables-admin.js')); ?>"></script>
+	<script type="module">
+		import DS from "<?= base_url('public/js/datatables.js'); ?>";
+		var baseUrl = '<?= base_url() ?>';
+		$('.datatable').each(function(){
+			let url = $(this).attr('data-url');
+			let container = '#'+$(this).attr('id');
+			DS.datatable(container, url);
+		})
+	</script>
+	<script>
+		<?php if ($this->session->flashdata('flash')) : ?>
+			toastr.options = {
+				"closeButton": false,
+				"debug": false,
+				"newestOnTop": false,
+				"progressBar": true,
+				"positionClass": "toast-top-right",
+				"preventDuplicates": false,
+				"onclick": null,
+				"showDuration": "300",
+				"hideDuration": "1000",
+				"timeOut": "5000",
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+				};
+			toastr.success("<?= $this->session->flashdata('flash'); ?>");
+		<?php endif; ?>
+	</script>
 </body>
 </html>

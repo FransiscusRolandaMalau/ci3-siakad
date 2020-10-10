@@ -12,11 +12,11 @@
 						<?= $this->session->flashdata('flash'); ?>
 					</div>
 				<?php endif; ?>
-				<?= form_open('auth/proses_login'); ?>
+				<?= form_open('auth/login'); ?>
 					<div class="form-group">
-						<label class="font-size-h6 font-weight-bolder text-dark">Username</label>
-						<input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="text" name="username" autocomplete="off" placeholder="Your Username" />
-						<span class="text-danger"><?= form_error('username'); ?></span>
+						<label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+						<input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="text" name="email" autocomplete="off" placeholder="Your Email or Username" />
+						<span class="text-danger"><?= form_error('email'); ?></span>
 					</div>
 
 					<div class="form-group">

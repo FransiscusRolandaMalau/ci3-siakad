@@ -1,6 +1,6 @@
 <div id="kt_header_mobile" class="header-mobile align-items-center">
     <a href="index.html">
-        <img alt="Logo" src="" />
+		<img alt="Logo" src="<?= base_url() ;?>public/img/logo-light.png"/>
     </a>
     <div class="d-flex align-items-center">
         <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
