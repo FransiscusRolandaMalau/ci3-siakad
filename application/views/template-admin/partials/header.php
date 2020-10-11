@@ -32,16 +32,15 @@
             <div class="dropdown">
                 <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
                     <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
-                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?= $this->session->userdata['name']; ?></span>
-                        <span class="symbol symbol-35 symbol-light-success">
-                            <img src="<?= base_url() ;?>public/img/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
+                        <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                            <img src="<?= base_url() ;?>public/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
                         </span>
                     </div>
                 </div>
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
                     <div class="d-flex align-items-center p-8 rounded-top">
                         <div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-                            <img src="<?= base_url() ;?>public/img/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
+                            <img src="<?= base_url() ;?>public/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
                         </div>
                         <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5"><?= $this->session->userdata['name']; ?></div>
                     </div>

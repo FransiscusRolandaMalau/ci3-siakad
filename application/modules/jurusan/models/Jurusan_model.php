@@ -32,7 +32,11 @@ class Jurusan_model extends CI_Model
 
 	public function save()
 	{
-
+		$data = array(
+            'kode_jurusan' => $this->input->post('kode_jurusan'),
+			'nama_jurusan' => $this->input->post('nama_jurusan'),
+		);
+		return $this->db->query("INSERT INTO jurusan (kode_jurusan, nama_jurusan) VALUES ($data)");
 	}
 
 	public function update()

@@ -1,7 +1,7 @@
 <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
     <div class="brand flex-column-auto" id="kt_brand">
         <a href="}" class="brand-logo">
-            <img alt="Logo" src="<?= base_url() ;?>public/img/logo-light.png"/>
+            <img alt="Logo" src="<?= base_url() ;?>public/admin/images/logo/logo-light.png"/>
         </a>
     </div>
     <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">

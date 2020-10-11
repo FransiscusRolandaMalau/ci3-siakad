@@ -36,13 +36,22 @@ class Jurusan extends CI_Controller
 
 	public function create()
 	{
-		if ($this->form_validation->run() == FALSE) {
-			$data['title'] = 'Jurusan';
-			$data['page_header'] = 'Jurusan';
-			$data['content'] = $this->load->view('create', $data, TRUE);
-			$this->load->view('template-admin/main-form', $data);
-		} else {
+		$data['title'] = 'Jurusan';
+		$data['page_header'] = 'Jurusan';
+		$data['content'] = $this->load->view('create', $data, TRUE);
+		$this->load->view('template-admin/main-form', $data);
+	}
 
+	public function store()
+	{
+		$jurusan = $this->Jurusan_model;
+		$validation = $this->form_validation;
+		$validation->set_rules($jurusan->rules());
+
+		if ($validation->run()) {
+			$jurusan->save();
+			$this->session->set_flashdata('flash', 'Jurusan Berhasil Ditambahkan.');
+			return redirect(base_url().'jurusan');
 		}
 	}
 

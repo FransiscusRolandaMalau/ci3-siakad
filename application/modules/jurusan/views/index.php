@@ -80,10 +80,10 @@
 	<table class="table table-striped- table-bordered table-hover table-checkable datatable" id="kt_datatable_2" data-url="<?= base_url('jurusan/list_data'); ?>" style="margin-top: 13px !important">
         <thead>
             <tr>
-                <th style="width: 32px;">#</th>
+                <th style="width: 1px;">#</th>
                 <th>Kode Jurusan</th>
                 <th>Nama Jurusan</th>
-                <th>Actions</th>
+                <th style="width: 55px;">Actions</th>
             </tr>
         </thead>
     </table>
