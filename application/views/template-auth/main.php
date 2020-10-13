@@ -3,7 +3,7 @@
 	require_once './vendor/autoload.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="utf-8" />
 		<title><?= $title ?> - Sistem Informasi Akademik</title>

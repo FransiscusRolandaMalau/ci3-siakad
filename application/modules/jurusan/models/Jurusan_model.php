@@ -2,50 +2,39 @@
 
 class Jurusan_model extends CI_Model
 {
-	private $model = "jurusan";
-
-	public function rules()
-	{
-		return [
-			[
-				'field' => 'kode_jurusan',
-				'label' => 'Kode Jurusan',
-				'rules' => 'required'
-			],
-			[
-				'field' => 'nama_jurusan',
-				'label' => 'Nama Jurusan',
-				'rules' => 'required'
-			],
-		];
-	}
-
+	protected $table = "jurusan";
 	public function getAll()
 	{
-		return $this->db->query("SELECT * FROM jurusan ORDER BY id_jurusan DESC")->result_array();
+		return $this->db->query("SELECT * FROM jurusan ORDER BY id_jurusan ASC")->result_array();
 	}
 
 	public function getById($id)
 	{
-		return $this->db->query("SELECT * FROM jurusan WHERE id = $id")->row_array();
+		return $this->db->get_where($this->table, ['id_jurusan' => $id])->row();
 	}
 
-	public function save()
+	public function insert()
 	{
 		$data = array(
-            'kode_jurusan' => $this->input->post('kode_jurusan'),
+			'kode_jurusan' => $this->input->post('kode_jurusan'),
 			'nama_jurusan' => $this->input->post('nama_jurusan'),
 		);
-		return $this->db->query("INSERT INTO jurusan (kode_jurusan, nama_jurusan) VALUES ($data)");
+
+		return $this->db->insert($this->table, $data);
 	}
 
-	public function update()
+	public function update($id)
 	{
-
+		$data = array(
+			'kode_jurusan' => $this->input->post('kode_jurusan'),
+			'nama_jurusan' => $this->input->post('nama_jurusan')
+		);
+		
+		return $this->db->update($this->table, $data, array('id_jurusan' => $id));
 	}
 
-	public function delete($id_jurusan)
+	public function delete($id)
 	{
-		return $this->db->query("DELETE FROM jurusan WHERE id_jurusan = $id_jurusan");
+		return $this->db->query("DELETE FROM jurusan WHERE id_jurusan = $id");
 	}
 }

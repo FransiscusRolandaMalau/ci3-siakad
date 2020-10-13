@@ -1,6 +1,5 @@
 {
     "/public/admin/js/app.js": "/public/admin/js/app.js",
-    "/public/admin/css/app.css": "/public/admin/css/app.css",
     "/public/admin/plugins/global/plugins.bundle.css": "/public/admin/plugins/global/plugins.bundle.css",
     "/public/admin/css/style.bundle.css": "/public/admin/css/style.bundle.css",
     "/public/admin/plugins/custom/cropper/cropper.bundle.css": "/public/admin/plugins/custom/cropper/cropper.bundle.css",
@@ -249,6 +248,7 @@
     "/public/admin/plugins/global/fonts/socicon/socicon.eot": "/public/admin/plugins/global/fonts/socicon/socicon.eot",
     "/public/admin/plugins/global/fonts/socicon/socicon.ttf": "/public/admin/plugins/global/fonts/socicon/socicon.ttf",
     "/public/admin/plugins/global/fonts/socicon/socicon.woff": "/public/admin/plugins/global/fonts/socicon/socicon.woff",
+    "/public/admin/js/datatables-services.js": "/public/admin/js/datatables-services.js",
     "/public/admin/plugins/custom/datatables/datatables.bundle.js": "/public/admin/plugins/custom/datatables/datatables.bundle.js",
     "/public/admin/plugins/custom/datatables/datatables.bundle.css": "/public/admin/plugins/custom/datatables/datatables.bundle.css"
 }

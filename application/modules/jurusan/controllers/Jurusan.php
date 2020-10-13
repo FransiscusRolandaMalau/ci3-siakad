@@ -5,20 +5,20 @@ class Jurusan extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Jurusan_model');
+		$this->load->model('jurusan_model');
 	}
 
 	public function index()
 	{
-		$data['title'] = 'Jurusan';
-		$data['page_header'] = 'Jurusan';
+		$data['title'] = 'Data Jurusan';
+		$data['page_header'] = 'Data Jurusan';
 		$data['content'] = $this->load->view('index', $data, TRUE);
 		$this->load->view('template-admin/main-datatables', $data);
 	}
 
 	public function list_data()
 	{
-		$query = $this->Jurusan_model->getAll();
+		$query = $this->jurusan_model->getAll();
 		$inc = 1;
 		$data = array();
 		foreach ($query as $key => $value) {
@@ -36,37 +36,52 @@ class Jurusan extends CI_Controller
 
 	public function create()
 	{
-		$data['title'] = 'Jurusan';
-		$data['page_header'] = 'Jurusan';
-		$data['content'] = $this->load->view('create', $data, TRUE);
-		$this->load->view('template-admin/main-form', $data);
-	}
+		$data['title'] = 'Tambah Data Jurusan';
+		$data['page_header'] = 'Tambah Data Jurusan';
+		
+		$this->form_validation->set_rules('kode_jurusan', 'Kode Jurusan', 'trim|required|is_unique[jurusan.kode_jurusan]');
+		$this->form_validation->set_rules('nama_jurusan', 'Nama Jurusan', 'trim|required');
 
-	public function store()
-	{
-		$jurusan = $this->Jurusan_model;
-		$validation = $this->form_validation;
-		$validation->set_rules($jurusan->rules());
-
-		if ($validation->run()) {
-			$jurusan->save();
-			$this->session->set_flashdata('flash', 'Jurusan Berhasil Ditambahkan.');
+		if ($this->form_validation->run() === FALSE) {
+			$data['content'] = $this->load->view('create', $data, TRUE);
+			$this->load->view('template-admin/main-form', $data);
+		} else {
+			$this->jurusan_model->insert();
+			$this->session->set_flashdata('flash', 'Jurusan Berhasil Ditambahkan');
 			return redirect(base_url().'jurusan');
 		}
 	}
 
-	public function edit()
+	public function edit($id_jurusan)
 	{
+		$data['jurusan'] = $this->jurusan_model->getById($id_jurusan);
+		$data['title'] = 'Edit Data Jurusan';
+		$data['page_header'] = 'Edit Data Jurusan';
+		
+		$this->form_validation->set_rules('kode_jurusan', 'Kode Jurusan', 'trim|required');
+		$this->form_validation->set_rules('nama_jurusan', 'Nama Jurusan', 'trim|required');
 
-	}
-
-	public function destroy($id_jurusan = NULL)
-	{
-		if (!isset($id_jurusan)) show_404();
-
-		if ($this->Jurusan_model->delete($id_jurusan)) {
-			$this->session->set_flashdata('flash', 'Jurusan Deleted Successfully');
+		if ($this->form_validation->run() === FALSE) {
+			$data['content'] = $this->load->view('edit', $data, TRUE);
+			$this->load->view('template-admin/main-form', $data);
+		} else {
+			$this->jurusan_model->update($id_jurusan);
+			$this->session->set_flashdata('flash', 'Jurusan Berhasil Diperbarui');
 			return redirect(base_url().'jurusan');
 		}
+	}
+
+	public function destroy($id)
+	{
+		$data = $this->jurusan_model->getById($id);
+
+		if ($data) {
+			$this->jurusan_model->delete($id);
+			$this->session->set_flashdata('flash', 'Jurusan Berhasil Dihapus');
+		} else {
+			$this->session->set_flashdata('flash', 'Jurusan Tidak Ditemukan');
+		}
+		
+		return redirect(base_url().'jurusan');
 	}
 }

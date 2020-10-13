@@ -72,7 +72,7 @@
 						<path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
 					</g>
 				</svg>
-			</span>Add <?= $page_header; ?>
+			</span>Tambah <?= $page_header; ?>
 		</a>
 	</div>
 </div>
@@ -81,9 +81,9 @@
         <thead>
             <tr>
                 <th style="width: 1px;">#</th>
-                <th>Kode Jurusan</th>
+                <th style="width: 105px;">Kode Jurusan</th>
                 <th>Nama Jurusan</th>
-                <th style="width: 55px;">Actions</th>
+                <th class="action" style="width: 80px;">Actions</th>
             </tr>
         </thead>
     </table>

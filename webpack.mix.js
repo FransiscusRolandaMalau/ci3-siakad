@@ -98,7 +98,8 @@ require('laravel-mix-purgecss');
  */
 
 // Default
-mix.js('resources/admin/js/app.js', 'public/admin/js').scripts('resources/admin/js/config.js', 'public/admin/js/config.js').sass('resources/admin/sass/app.scss', 'public/admin/css');
+mix.js('resources/admin/js/app.js', 'public/admin/js')
+	.scripts('resources/admin/js/config.js', 'public/admin/js/config.js');
 
 // Global jquery
 // mix.autoload({
@@ -201,7 +202,18 @@ mix.webpackConfig({
     mix.copy(file, `public/admin/plugins/global/fonts/${folder}/${path.basename(file)}`);
 });
 
+(glob.sync('resources/metronic/plugins/**/*.+(woff|woff2|eot|ttf)') || []).forEach(file => {
+    var folder = file.match(/resources\/metronic\/plugins\/(.*?)\//)[1];
+    mix.copy(file, `public/plugins/global/fonts/${folder}/${path.basename(file)}`);
+});
+(glob.sync('node_modules/+(@fortawesome|socicon|line-awesome)/**/*.+(woff|woff2|eot|ttf)') || []).forEach(file => {
+    var folder = file.match(/node_modules\/(.*?)\//)[1];
+    mix.copy(file, `public/plugins/global/fonts/${folder}/${path.basename(file)}`);
+});
+
 // Optional: Import datatables.net
+mix.copy('resources/admin/js/datatables-services.js', 'public/admin/js/datatables-services.js');
+
 mix.scripts([
     'node_modules/datatables.net/js/jquery.dataTables.js',
     'node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js',
@@ -226,7 +238,7 @@ mix.scripts([
     'node_modules/datatables.net-rowreorder/js/dataTables.rowReorder.min.js',
     'node_modules/datatables.net-scroller/js/dataTables.scroller.min.js',
     'node_modules/datatables.net-select/js/dataTables.select.min.js',
-], 'public/admin/plugins/custom/datatables/datatables.bundle.js');
+], 'public/admin/plugins/custom/datatables/datatables.bundle.js').purgeCss();
 mix.styles([
     'node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css',
     'node_modules/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css',
@@ -240,8 +252,4 @@ mix.styles([
     'node_modules/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css',
     'node_modules/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css',
     'node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css',
-], 'public/admin/plugins/custom/datatables/datatables.bundle.css');
-
-if (mix.inProduction()) {
-	mix.version().purgeCss();
-  }
+], 'public/admin/plugins/custom/datatables/datatables.bundle.css').purgeCss();

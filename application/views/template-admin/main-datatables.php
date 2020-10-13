@@ -7,10 +7,10 @@
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="utf-8" />
-		<title><?= $title ?> - Sistem Informasi Akademik</title>
+		<title><?= $title ?> - Sistem Informasi Akademik Indonesia</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -76,7 +76,7 @@
 
 	<!--begin::Page Scripts(used by this page)-->
 	<script type="module">
-		import DS from "<?= base_url('public/js/datatables.js'); ?>";
+		import DS from "<?= base_url('public/admin/js/datatables-services.js'); ?>";
 		var baseUrl = '<?= base_url() ?>';
 		$('.datatable').each(function(){
 			let url = $(this).attr('data-url');

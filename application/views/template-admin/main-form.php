@@ -7,7 +7,7 @@
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 	<head>
 	<meta charset="utf-8" />
 		<title><?= $title ?> - Sistem Informasi Akademik</title>
@@ -70,6 +70,13 @@
 		<!--end::Global Theme Bundle-->
 
 		<!--begin::Page Vendors(used by this page)-->
+		<script type="text/javascript">
+		$('#kt_select2_1, #kt_select2_1_validate').select2({
+            placeholder: function() {
+				$(this).data('placeholder');
+			}
+        });
+		</script>
 		<!--end::Page Vendors-->
 	</body>
 </html>

@@ -5,7 +5,7 @@
             <a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
         </div>
         <div class="nav nav-dark">
-            <a href="<?= base_url(); ?>" target="_blank" class="nav-link pl-0 pr-5">Sistem Informasi Akademik</a>
+            <a href="<?= site_url(); ?>" target="_blank" class="nav-link pl-0 pr-5">Sistem Informasi Akademik Indonesia</a>
         </div>
     </div>
 </div>
