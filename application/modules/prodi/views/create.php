@@ -27,18 +27,6 @@
 							<span class="text-danger"><?= form_error('nama_prodi'); ?></span>
 						</div>
 					</div>
-					<div class="form-group row">
-						<label class="col-3">Nama Jurusan</label>
-						<div class="col-9">
-							<select name="nama_jurusan" class="form-control" id="kt_select2_1" data-placeholder="--Pilih Jurusan">
-								<option></option>
-								<?php foreach ($jurusan as $key => $value) : ?>
-									<option value="<?= $value['nama_jurusan'] ;?>"><?= $value['nama_jurusan'] ;?></option>
-								<?php endforeach; ?>
-							</select>
-							<span class="text-danger"><?= form_error('nama_jurusan'); ?></span>
-						</div>
-					</div>
 					<input type="submit" class="btn btn-primary btn-block" value="Simpan">
 				</div>
 			</div>

@@ -83,7 +83,6 @@
                 <th style="width: 1px;">#</th>
                 <th style="width: 105px;">Kode Prodi</th>
                 <th>Nama Prodi</th>
-                <th>Nama Jurusan</th>
                 <th class="action" style="width: 80px;">Actions</th>
             </tr>
         </thead>

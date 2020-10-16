@@ -5,7 +5,7 @@ class Prodi extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['prodi_model', 'jurusan/jurusan_model']);
+		$this->load->model('prodi_model');
 	}
 
 	public function index()
@@ -25,7 +25,6 @@ class Prodi extends CI_Controller
 			$data[$key][] = $no++;
 			$data[$key][] = $value['kode_prodi'];
 			$data[$key][] = $value['nama_prodi'];
-			$data[$key][] = $value['nama_jurusan'];
 			$data[$key][] = '<a href="'. base_url("/prodi/edit").'/'.$value['id_prodi'].'" class="btn btn-sm btn-clean btn-icon" title="Edit"><i class="la la-edit"></i></a>
 							<a href="'. base_url("/prodi/destroy").'/'.$value['id_prodi'].'" class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="javasciprt: return confirm(\'Are You Sure ?\')"><i class="la la-trash"></i></a>';
 		endforeach;
@@ -39,11 +38,9 @@ class Prodi extends CI_Controller
 	{
 		$data['title'] = 'Tambah Program Studi';
 		$data['page_header'] = 'Tambah Program Studi';
-		$data['jurusan'] = $this->jurusan_model->getAll('jurusan');
 
 		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required|is_unique[prodi.kode_prodi]');
 		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
-		$this->form_validation->set_rules('nama_jurusan', 'Nama Jurusan', 'trim|required');
 
 		if ($this->form_validation->run() === FALSE) {
 			$data['content'] = $this->load->view('create', $data, TRUE);
@@ -57,27 +54,19 @@ class Prodi extends CI_Controller
 
 	public function edit($id_prodi)
 	{
-		$data['prodi'] = $this->db->query("SELECT * 
-											FROM
-												prodi p,
-												jurusan j 
-											WHERE
-												p.nama_jurusan = j.nama_jurusan 
-												AND p.id_prodi ='$id_prodi'")->result_array();
+		$data['prodi'] = $this->prodi_model->getById($id_prodi);
 		$data['title'] = 'Edit Prodi';
 		$data['page_header'] = 'Edit Prodi';
-		$data['jurusan'] = $this->jurusan_model->getAll('jurusan');
 
 		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required');
 		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
-		$this->form_validation->set_rules('nama_jurusan', 'Nama Jurusan', 'trim|required');
 
 		if ($this->form_validation->run() === FALSE) {
 			$data['content'] = $this->load->view('edit', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
 		} else {
 			$this->prodi_model->update($id_prodi);
-			$this->session->set_flashdata('flash', 'Jurusan Berhasil Diperbarui');
+			$this->session->set_flashdata('flash', 'Prodi Berhasil Diperbarui');
 			return redirect(base_url().'prodi');
 		}
 
@@ -89,9 +78,9 @@ class Prodi extends CI_Controller
 
 		if ($data) {
 			$this->prodi_model->delete($id);
-			$this->session->set_flashdata('flash', 'Jurusan Berhasil Dihapus');
+			$this->session->set_flashdata('flash', 'Prodi Berhasil Dihapus');
 		} else {
-			$this->session->set_flashdata('flash', 'Jurusan Tidak Ditemukan');
+			$this->session->set_flashdata('flash', 'Prodi Tidak Ditemukan');
 		}
 
 		return redirect(base_url().'prodi');

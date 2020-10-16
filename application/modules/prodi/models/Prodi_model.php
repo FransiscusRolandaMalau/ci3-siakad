@@ -19,7 +19,6 @@ class Prodi_model extends CI_Model
 		$data = array(
 			'kode_prodi' => $this->input->post('kode_prodi'),
 			'nama_prodi' => $this->input->post('nama_prodi'),
-			'nama_jurusan' => $this->input->post('nama_jurusan')
 		);
 	
 		return $this->db->insert($this->table, $data);
@@ -31,7 +30,6 @@ class Prodi_model extends CI_Model
 		$data = array(
 			'kode_prodi' => $this->input->post('kode_prodi'),
 			'nama_prodi' => $this->input->post('nama_prodi'),
-			'nama_jurusan' => $this->input->post('nama_jurusan')
 		);
 
 		return $this->db->update($this->table, $data, array('id_prodi', $id));

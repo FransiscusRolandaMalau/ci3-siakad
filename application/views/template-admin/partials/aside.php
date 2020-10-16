@@ -42,14 +42,6 @@
                                     <span class="menu-text">Data Dosen</span>
                                 </a>
 							</li>
-							<li class="menu-item <?= $this->uri->segment(1) == 'jurusan' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'jurusan' ;?>" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">Data Jurusan</span>
-                                </a>
-                            </li>
 							<li class="menu-item <?= active_link_controller('matakuliah'); ?>" aria-haspopup="true">
                                 <a href="<?= site_url('matakuliah') ?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">

@@ -202,15 +202,6 @@ mix.webpackConfig({
     mix.copy(file, `public/admin/plugins/global/fonts/${folder}/${path.basename(file)}`);
 });
 
-(glob.sync('resources/metronic/plugins/**/*.+(woff|woff2|eot|ttf)') || []).forEach(file => {
-    var folder = file.match(/resources\/metronic\/plugins\/(.*?)\//)[1];
-    mix.copy(file, `public/plugins/global/fonts/${folder}/${path.basename(file)}`);
-});
-(glob.sync('node_modules/+(@fortawesome|socicon|line-awesome)/**/*.+(woff|woff2|eot|ttf)') || []).forEach(file => {
-    var folder = file.match(/node_modules\/(.*?)\//)[1];
-    mix.copy(file, `public/plugins/global/fonts/${folder}/${path.basename(file)}`);
-});
-
 // Optional: Import datatables.net
 mix.copy('resources/admin/js/datatables-services.js', 'public/admin/js/datatables-services.js');
 
