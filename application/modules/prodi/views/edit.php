@@ -8,8 +8,9 @@
     </div>
 </div>
 <div class="card-body">
-	<?= form_open('prodi/edit/'.$prodi->id_prodi); ?>
-		<?= form_hidden('id_prodi', $prodi->id_prodi); ?>
+	<form action="" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+		<input type="hidden" name="id" value="<?php echo $prodi->id_prodi?>" />
 		<div class="row">
 			<div class="col-xl-2"></div>
 			<div class="col-xl-8">

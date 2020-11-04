@@ -77,7 +77,7 @@
 	</div>
 </div>
 <div class="card-body">
-	<table class="table table-striped- table-bordered table-hover table-checkable datatable" id="kt_datatable_2" data-url="<?= base_url('prodi/list_data'); ?>" style="margin-top: 13px !important">
+	<table class="table table-striped- table-bordered table-hover table-checkable datatable" id="kt_datatable_2" data-url="<?= base_url('prodi/listData'); ?>" style="margin-top: 13px !important">
         <thead>
             <tr>
                 <th style="width: 1px;">#</th>

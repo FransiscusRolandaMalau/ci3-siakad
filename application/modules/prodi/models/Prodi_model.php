@@ -2,16 +2,32 @@
 
 class Prodi_model extends CI_Model
 {
-	protected $table = 'prodi';
+	protected $_table = 'prodi';
+
+	public function rules()
+	{
+		return [
+			[
+				'field' => 'kode_prodi',
+				'label' => 'Kode Prodi',
+				'rules' => 'trim|required|is_unique[prodi.kode_prodi]'
+			],
+			[
+				'field' => 'nama_prodi',
+				'label' => 'Nama Prodi',
+				'rules' => 'trim|required'
+			]
+		];
+	}
 
 	public function getAll()
 	{
-		return $this->db->query("SELECT * FROM prodi ORDER BY id_prodi ASC")->result_array();
+		return $this->db->get($this->_table)->result_array();
 	}
 
 	public function getById($id)
 	{
-		return $this->db->get_where($this->table, ['id_prodi' => $id])->row();
+		return $this->db->get_where($this->_table, ['id_prodi' => $id])->row();
 	}
 
 	public function insert()
@@ -19,24 +35,26 @@ class Prodi_model extends CI_Model
 		$data = array(
 			'kode_prodi' => $this->input->post('kode_prodi'),
 			'nama_prodi' => $this->input->post('nama_prodi'),
+			'created_at' => date('Y-m-d H:i:s')
 		);
 	
-		return $this->db->insert($this->table, $data);
+		return $this->db->insert($this->_table, $data);
 	}
 
-	public function update($id)
+	public function update()
 	{
-
 		$data = array(
+			'id_prodi' => $this->input->post('id'),
 			'kode_prodi' => $this->input->post('kode_prodi'),
 			'nama_prodi' => $this->input->post('nama_prodi'),
+			'updated_at' => date('Y-m-d H:i:s')
 		);
 
-		return $this->db->update($this->table, $data, array('id_prodi', $id));
+		return $this->db->update($this->_table, $data, array('id_prodi' => $data['id']));
 	}
 
 	public function delete($id)
 	{
-		return $this->db->query("DELETE FROM prodi WHERE id_prodi = $id");
+		return $this->db->delete($this->_table, array('id_prodi' => $id));
 	}
 }

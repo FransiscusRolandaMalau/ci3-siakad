@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="card-body">
-	<?= form_open('prodi/create'); ?>
+	<?= form_open(''); ?>
 		<div class="row">
 			<div class="col-xl-2"></div>
 			<div class="col-xl-8">

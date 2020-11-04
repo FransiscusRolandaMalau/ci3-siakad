@@ -16,7 +16,7 @@ class Prodi extends CI_Controller
 		$this->load->view('template-admin/main-datatables', $data);
 	}
 
-	public function list_data()
+	public function listData()
 	{
 		$query = $this->prodi_model->getAll();
 		$no = 1;
@@ -39,40 +39,43 @@ class Prodi extends CI_Controller
 		$data['title'] = 'Tambah Program Studi';
 		$data['page_header'] = 'Tambah Program Studi';
 
-		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required|is_unique[prodi.kode_prodi]');
-		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
-
-		if ($this->form_validation->run() === FALSE) {
+		$prodi = $this->prodi_model;
+		$validation = $this->form_validation;
+		$validation->set_rules($prodi->rules());
+		
+		if ($validation->run() == TRUE) {
+			$prodi->insert();
+			$this->session->set_flashdata('flash', 'Prodi Berhasil Ditambahkan');
+			return redirect(base_url('prodi'));
+		} else {
 			$data['content'] = $this->load->view('create', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
-		} else {
-			$this->prodi_model->insert();
-			$this->session->set_flashdata('flash', 'Prodi Berhasil Ditambahkan');
-			return redirect(base_url().'prodi');
 		}
 	}
 
-	public function edit($id_prodi)
+	public function edit($id = null)
 	{
-		$data['prodi'] = $this->prodi_model->getById($id_prodi);
+		if (!isset($id)) redirect(base_url('prodi'));
+
 		$data['title'] = 'Edit Prodi';
 		$data['page_header'] = 'Edit Prodi';
+		
+		$prodi = $this->prodi_model;
+		$validation = $this->form_validation;
+		$validation->set_rules($prodi->rules());
 
-		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required');
-		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
-
-		if ($this->form_validation->run() === FALSE) {
-			$data['content'] = $this->load->view('edit', $data, TRUE);
-			$this->load->view('template-admin/main-form', $data);
-		} else {
-			$this->prodi_model->update($id_prodi);
+		if ($validation->run()) {
+			$prodi->update();
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Diperbarui');
-			return redirect(base_url().'prodi');
+			return redirect(base_url('prodi'));
 		}
 
+		$data['prodi'] = $prodi->getById($id);
+		$data['content'] = $this->load->view('edit', $data, TRUE);
+		$this->load->view('template-admin/main-form', $data);
 	}
 
-	public function destroy($id)
+	public function destroy($id = null)
 	{
 		$data = $this->prodi_model->getById($id);
 
