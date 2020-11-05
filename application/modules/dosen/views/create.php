@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="card-body">
-	<?= form_open(''); ?>
+	<?= form_open_multipart(''); ?>
 		<div class="row">
 			<div class="col-xl-2"></div>
 			<div class="col-xl-8">
@@ -61,8 +61,8 @@
 					<div class="form-group row">
 						<label class="col-3">Foto</label>
 						<div class="custom-file col-9">
-							<input type="file" class="custom-file-input" id="customFile" name="photo"/>
-							<label class="custom-file-label" for="customFile">Choose file</label>
+							<input type="file" class="custom-file-input" id="photo" name="photo"/>
+							<label class="custom-file-label" for="photo">Choose file</label>
 							<span class="text-danger"><?= form_error('photo'); ?></span>
 						</div>
 					</div>

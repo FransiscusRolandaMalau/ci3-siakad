@@ -50,7 +50,6 @@ class Dosen extends CI_Controller
 		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email|is_unique[dosen.email]');
 		$this->form_validation->set_rules('telp', 'No.Telepon', 'trim|required|numeric');
-		$this->form_validation->set_rules('photo', 'Foto', 'trim|required');
 
 		if ($this->form_validation->run() == TRUE) {
 			$this->dosen_model->insert();
@@ -64,7 +63,28 @@ class Dosen extends CI_Controller
 
 	public function edit($id = null)
 	{
+		if (!isset($id)) redirect(base_url('dosen'));
 
+		$dosen = $this->dosen_model;
+		$data['title'] = 'Tambah Data Dosen';
+		$data['page_header'] = 'Tambah Data Dosen';
+		$data['dosen'] = $dosen->getById($id);
+
+		$this->form_validation->set_rules('nidn', 'NIDN', 'trim|required');
+		$this->form_validation->set_rules('nama_dosen', 'Nama Dosen', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
+		$this->form_validation->set_rules('telp', 'No.Telepon', 'trim|required|numeric');
+
+		if ($this->form_validation->run() == TRUE) {
+			$dosen->update();
+			$this->session->set_flashdata('flash', 'Data Dosen Berhasil Ditambahkan');
+			return redirect(base_url('dosen'));
+		} else {
+			$data['content'] = $this->load->view('edit', $data, TRUE);
+			$this->load->view('template-admin/main-form', $data);
+		}
 	}
 
 	public function destroy($id)

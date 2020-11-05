@@ -31,7 +31,7 @@ class Dosen_model extends CI_Model
 	}
 
 
-	public function update($id)
+	public function update()
 	{
 		$post = $this->input->post();
 		$this->id_dosen = $post['id'];
@@ -43,6 +43,7 @@ class Dosen_model extends CI_Model
 		$this->telp = $post['telp'];
 		if (!empty($_FILES['photo']['name'])) {
 			$this->photo = $this->uploadImage();
+			unlink(APPPATH."../resources/admin/images/upload/dosen/".$post['old_photo']);
 		} else {
 			$this->photo = $post['old_photo'];
 		}
@@ -59,11 +60,11 @@ class Dosen_model extends CI_Model
 
 	private function uploadImage()
 	{
-		$config['upload_path'] = APPPATH.'../resources/admin/images/upload/dosen/';
-		$config['allowed_types'] = 'jpg|jpeg|png';
-		$config['file_name'] = $this->dosen_id;
-		$config['overwrite'] = true;
-		$config['max_size'] = 2024;
+		$config['upload_path'] 		= APPPATH."../resources/admin/images/upload/dosen/";
+		$config['allowed_types'] 	= 'jpg|jpeg|png';
+		$config['overwrite'] 		= true;
+		$config['max_size'] 		= 2048;
+		$config['encrypt_name'] 	= TRUE;
 
 		$this->load->library('upload', $config);
 
