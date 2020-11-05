@@ -16,9 +16,9 @@ class Dosen extends CI_Controller
 		$this->load->view('template-admin/main-datatables', $data);
 	}
 
-	public function listData()
+	public function list_data()
 	{
-		$query = $this->dosen_model->getAll();
+		$query = $this->dosen_model->get_all();
 		$no = 1;
 		$data = array();
 		foreach ($query as $key => $value) :
@@ -51,11 +51,14 @@ class Dosen extends CI_Controller
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email|is_unique[dosen.email]');
 		$this->form_validation->set_rules('telp', 'No.Telepon', 'trim|required|numeric');
 
-		if ($this->form_validation->run() == TRUE) {
+		if ($this->form_validation->run() == TRUE) 
+		{
 			$this->dosen_model->insert();
 			$this->session->set_flashdata('flash', 'Data Dosen Berhasil Ditambahkan');
 			return redirect(base_url('dosen'));
-		} else {
+		} 
+		else 
+		{
 			$data['content'] = $this->load->view('create', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
 		}
@@ -63,12 +66,12 @@ class Dosen extends CI_Controller
 
 	public function edit($id = null)
 	{
-		if (!isset($id)) redirect(base_url('dosen'));
+		if ( ! isset($id)) redirect(base_url('dosen'));
 
 		$dosen = $this->dosen_model;
 		$data['title'] = 'Tambah Data Dosen';
 		$data['page_header'] = 'Tambah Data Dosen';
-		$data['dosen'] = $dosen->getById($id);
+		$data['dosen'] = $dosen->get_by_id($id);
 
 		$this->form_validation->set_rules('nidn', 'NIDN', 'trim|required');
 		$this->form_validation->set_rules('nama_dosen', 'Nama Dosen', 'trim|required');
@@ -77,11 +80,14 @@ class Dosen extends CI_Controller
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
 		$this->form_validation->set_rules('telp', 'No.Telepon', 'trim|required|numeric');
 
-		if ($this->form_validation->run() == TRUE) {
+		if ($this->form_validation->run() == TRUE) 
+		{
 			$dosen->update();
 			$this->session->set_flashdata('flash', 'Data Dosen Berhasil Ditambahkan');
 			return redirect(base_url('dosen'));
-		} else {
+		} 
+		else 
+		{
 			$data['content'] = $this->load->view('edit', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
 		}
@@ -90,12 +96,15 @@ class Dosen extends CI_Controller
 	public function destroy($id)
 	{
 		$dosen = $this->dosen_model;
-		$data = $dosen->getById($id);
+		$data = $dosen->get_by_id($id);
 
-		if ($data) {
+		if ($data) 
+		{
 			$dosen->delete($id);
 			$this->session->set_flashdata('flash', 'Data Dosen Berhasil Dihapus');
-		} else {
+		} 
+		else 
+		{
 			$this->session->set_flashdata('flash', 'Data Dosen Tidak Ditemukan');
 		}
 

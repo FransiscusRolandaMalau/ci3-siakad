@@ -4,12 +4,12 @@ class Prodi_model extends CI_Model
 {
 	protected $_table = 'prodi';
 
-	public function getAll()
+	public function get_all()
 	{
 		return $this->db->get($this->_table)->result_array();
 	}
 
-	public function getById($id)
+	public function get_by_id($id)
 	{
 		return $this->db->get_where($this->_table, ['id_prodi' => $id])->row();
 	}

@@ -16,9 +16,9 @@ class Prodi extends CI_Controller
 		$this->load->view('template-admin/main-datatables', $data);
 	}
 
-	public function listData()
+	public function list_data()
 	{
-		$query = $this->prodi_model->getAll();
+		$query = $this->prodi_model->get_all();
 		$no = 1;
 		$data = array();
 		foreach ($query as $key => $value) :
@@ -42,11 +42,14 @@ class Prodi extends CI_Controller
 		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required|is_unique[prodi.kode_prodi]');
 		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
 
-		if ($this->form_validation->run() == TRUE) {
+		if ($this->form_validation->run() == TRUE) 
+		{
 			$this->prodi_model->insert();
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Ditambahkan');
 			return redirect(base_url('prodi'));
-		} else {
+		} 
+		else 
+		{
 			$data['content'] = $this->load->view('create', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
 		}
@@ -54,21 +57,24 @@ class Prodi extends CI_Controller
 
 	public function edit($id = null)
 	{
-		if (!isset($id)) redirect(base_url('prodi'));
+		if ( ! isset($id)) redirect(base_url('prodi'));
 
 		$prodi = $this->prodi_model;
 		$data['title'] = 'Edit Prodi';
 		$data['page_header'] = 'Edit Prodi';
-		$data['prodi'] = $prodi->getById($id);
+		$data['prodi'] = $prodi->get_by_id($id);
 
 		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required');
 		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
 		
-		if ($this->form_validation->run() == TRUE) {
+		if ($this->form_validation->run() == TRUE) 
+		{
 			$prodi->update($id);
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Diperbarui');
 			return redirect(base_url('prodi'));
-		} else {
+		} 
+		else 
+		{
 			$data['content'] = $this->load->view('edit', $data, TRUE);
 			$this->load->view('template-admin/main-form', $data);
 		}
@@ -77,12 +83,15 @@ class Prodi extends CI_Controller
 	public function destroy($id = null)
 	{
 		$prodi = $this->prodi_model;
-		$data = $prodi->getById($id);
+		$data = $prodi->get_by_id($id);
 		
-		if ($data) {
+		if ($data) 
+		{
 			$prodi->delete($id);
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Dihapus');
-		} else {
+		} 
+		else 
+		{
 			$this->session->set_flashdata('flash', 'Prodi Tidak Ditemukan');
 		}
 
