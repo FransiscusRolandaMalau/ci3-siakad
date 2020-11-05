@@ -1,10 +1,10 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Dashboard_model extends CI_Model
 {
-	public function ambil_data($id)
-	{
-		$this->db->where('name', $id);
-		return $this->db->get('users')->row();
-	}
+    public function ambil_data($id)
+    {
+        $this->db->where('name', $id);
+        return $this->db->get('users')->row();
+    }
 }

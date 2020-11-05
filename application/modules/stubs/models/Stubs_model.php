@@ -1,31 +1,26 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Stubs_model extends CI_Model
 {
-	protected $_table = 'Stub';
+    protected $_table = 'Stub';
 
-	public function getAll()
-	{
+    public function getAll()
+    {
+    }
 
-	}
+    public function save()
+    {
+    }
 
-	public function save()
-	{
+    public function getIdBy()
+    {
+    }
 
-	}
+    public function update()
+    {
+    }
 
-	public function getIdBy()
-	{
-
-	}
-
-	public function update()
-	{
-
-	}
-
-	public function delete()
-	{
-
-	}
+    public function delete()
+    {
+    }
 }
