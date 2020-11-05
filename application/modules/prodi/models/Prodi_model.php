@@ -4,22 +4,6 @@ class Prodi_model extends CI_Model
 {
 	protected $_table = 'prodi';
 
-	public function rules()
-	{
-		return [
-			[
-				'field' => 'kode_prodi',
-				'label' => 'Kode Prodi',
-				'rules' => 'trim|required|is_unique[prodi.kode_prodi]'
-			],
-			[
-				'field' => 'nama_prodi',
-				'label' => 'Nama Prodi',
-				'rules' => 'trim|required'
-			]
-		];
-	}
-
 	public function getAll()
 	{
 		return $this->db->get($this->_table)->result_array();
@@ -41,7 +25,7 @@ class Prodi_model extends CI_Model
 		return $this->db->insert($this->_table, $data);
 	}
 
-	public function update()
+	public function update($id)
 	{
 		$data = array(
 			'id_prodi' => $this->input->post('id'),
@@ -49,8 +33,8 @@ class Prodi_model extends CI_Model
 			'nama_prodi' => $this->input->post('nama_prodi'),
 			'updated_at' => date('Y-m-d H:i:s')
 		);
-
-		return $this->db->update($this->_table, $data, array('id_prodi' => $data['id']));
+		
+		return $this->db->update($this->_table, $data, array('id_prodi' => $id));
 	}
 
 	public function delete($id)

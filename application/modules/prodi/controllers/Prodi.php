@@ -39,12 +39,11 @@ class Prodi extends CI_Controller
 		$data['title'] = 'Tambah Program Studi';
 		$data['page_header'] = 'Tambah Program Studi';
 
-		$prodi = $this->prodi_model;
-		$validation = $this->form_validation;
-		$validation->set_rules($prodi->rules());
-		
-		if ($validation->run() == TRUE) {
-			$prodi->insert();
+		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required|is_unique[prodi.kode_prodi]');
+		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
+
+		if ($this->form_validation->run() == TRUE) {
+			$this->prodi_model->insert();
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Ditambahkan');
 			return redirect(base_url('prodi'));
 		} else {
@@ -57,35 +56,36 @@ class Prodi extends CI_Controller
 	{
 		if (!isset($id)) redirect(base_url('prodi'));
 
+		$prodi = $this->prodi_model;
 		$data['title'] = 'Edit Prodi';
 		$data['page_header'] = 'Edit Prodi';
-		
-		$prodi = $this->prodi_model;
-		$validation = $this->form_validation;
-		$validation->set_rules($prodi->rules());
+		$data['prodi'] = $prodi->getById($id);
 
-		if ($validation->run()) {
-			$prodi->update();
+		$this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required');
+		$this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
+		
+		if ($this->form_validation->run() == TRUE) {
+			$prodi->update($id);
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Diperbarui');
 			return redirect(base_url('prodi'));
+		} else {
+			$data['content'] = $this->load->view('edit', $data, TRUE);
+			$this->load->view('template-admin/main-form', $data);
 		}
-
-		$data['prodi'] = $prodi->getById($id);
-		$data['content'] = $this->load->view('edit', $data, TRUE);
-		$this->load->view('template-admin/main-form', $data);
 	}
 
 	public function destroy($id = null)
 	{
-		$data = $this->prodi_model->getById($id);
-
+		$prodi = $this->prodi_model;
+		$data = $prodi->getById($id);
+		
 		if ($data) {
-			$this->prodi_model->delete($id);
+			$prodi->delete($id);
 			$this->session->set_flashdata('flash', 'Prodi Berhasil Dihapus');
 		} else {
 			$this->session->set_flashdata('flash', 'Prodi Tidak Ditemukan');
 		}
 
-		return redirect(base_url().'prodi');
+		return redirect(base_url('prodi'));
 	}
 }

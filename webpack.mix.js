@@ -1,84 +1,3 @@
-// const mix = require('laravel-mix');
-// require('laravel-mix-purgecss');
-
-// // Admin
-// mix.copyDirectory("resources/admin/plugins/global/fonts", "public/fonts");
-// mix.sass("resources/admin/sass/style.scss", "public/css/style-admin.css").purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.styles(
-//     [
-//         "resources/admin/plugins/global/plugins.bundle.css",
-//         "resources/admin/plugins/custom/prismjs/prismjs.bundle.css",
-//         "resources/admin/css/style.bundle.css",
-//     ],
-//     "public/css/theme-admin.css"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.styles(
-//     [
-//         "resources/admin/css/pages/users/login-4.css",
-//     ],
-//     "public/css/theme-auth.css"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.styles(
-//     [
-//         "resources/admin/css/themes/layout/header/base/light.css",
-//         "resources/admin/css/themes/layout/header/menu/light.css",
-//         "resources/admin/css/themes/layout/brand/dark.css",
-//         "resources/admin/css/themes/layout/aside/dark.css",
-//     ],
-//     "public/css/layouts-admin.css"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.styles(
-//     [
-//         "resources/admin/plugins/custom/datatables/datatables.bundle.css",
-//     ],
-//     "public/css/datatables-admin.css"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.scripts(
-//     [
-//         "resources/admin/plugins/global/plugins.bundle.js",
-//         "resources/admin/plugins/custom/prismjs/prismjs.bundle.js",
-//         "resources/admin/js/scripts.bundle.js",
-//     ],
-//     "public/js/theme-admin.js"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.scripts(
-//     [
-//         "resources/admin/js/pages/custom/login/login-4.js",
-//     ],
-//     "public/js/theme-auth.js"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-// mix.scripts(
-//     [
-//         "resources/admin/plugins/custom/datatables/datatables.bundle.js",
-//     ],
-//     "public/js/datatables-admin.js"
-// ).purgeCss({
-//     enabled: mix.inProduction(),
-// });
-
-
-
 const mix = require('laravel-mix');
 const glob = require('glob');
 const path = require('path');
@@ -86,26 +5,9 @@ const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
 const rimraf = require('rimraf');
 require('laravel-mix-purgecss');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
-
 // Default
 mix.js('resources/admin/js/app.js', 'public/admin/js')
 	.scripts('resources/admin/js/config.js', 'public/admin/js/config.js');
-
-// Global jquery
-// mix.autoload({
-// 'jquery': ['$', 'jQuery'],
-// Popper: ['popper.js', 'default'],
-// });
 
 // 3rd party plugins css/js
 mix.sass('resources/admin/plugins/plugins.scss', 'public/admin/plugins/global/plugins.bundle.css').then(() => {
