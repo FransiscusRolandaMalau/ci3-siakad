@@ -17,10 +17,16 @@
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},
 	"require-dev": {
-		"mikey179/vfsStream": "1.1.*",
-		"phpunit/phpunit": "4.* || 5.*"
+		"mikey179/vfsstream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*",
+		"friendsofphp/php-cs-fixer": "^2.16"
 	},
 	"autoload": {
 		"files": ["mix.php"]
+	},
+	"scripts": {
+		"format": [
+            "vendor/bin/php-cs-fixer fix"
+        ]
 	}
 }
