@@ -1,4 +1,4 @@
-# SIAKAD Perguruan Tinggi
+# SIAKAD PT
 
 ## Requirements
 
@@ -22,4 +22,4 @@ $ npm run dev
 
 ## License
 
-Source code is available under [MIT License](./LICENSE.md)  
+Source code is available under [MIT License](./license.txt)  
