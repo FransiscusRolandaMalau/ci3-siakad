@@ -1,15 +1,15 @@
-# SIAKAD
+# SIAKAD Perguruan Tinggi
 
 ## Requirements
 
 The following tools are required in order to start the installation.
 
-- PHP >=7.4
+- PHP >=7.3
 - [Composer](https://getcomposer.org/download/)
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## What next?
-After clone or download this repository, next step is install all dependency required by laravel and laravel-mix.
+After clone or download this repository, next step is install all dependency.
 
 ```shell
 # install composer-dependency
