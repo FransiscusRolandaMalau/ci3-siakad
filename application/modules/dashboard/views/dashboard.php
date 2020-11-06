@@ -1,92 +1,51 @@
-<div class="alert alert-success mb-5 p-5" role="alert">
+<div class="row">
+	<div class="col-xl-3">
+		<div class="card card-custom bgi-no-repeat card-stretch gutter-b"
+			style="background-position: right top; background-size: 30% auto; background-image: url(/metronic/theme/html/demo1/dist/assets/media/svg/shapes/abstract-1.svg)">
+			<div class="card-body">
+				<i class="flaticon2-indent-dots icon-lg text-info"></i>
+				<span class="card-title font-weight-bolder text-dark-75 font-size-h1 mb-0 mt-6 d-block">
+					<?= $prodi ?>
+				</span>
+				<span class="font-weight-bold text-muted font-size-sm">Jumlah Program Studi</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="card card-custom bg-info card-stretch gutter-b">
+			<div class="card-body">
+				<i class="flaticon-time-2 icon-lg text-white"></i>
+				<span class="card-title font-weight-bolder text-white font-size-h1 mb-0 mt-6 d-block">
+					<?= $matakuliah ?>
+				</span>
+				<span class="font-weight-bold text-white font-size-sm">Jumlah Mata Kuliah</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="card card-custom bg-danger card-stretch gutter-b">
+			<div class="card-body">
+				<i class="flaticon2-group icon-lg text-white"></i>
+				<span class="card-title font-weight-bolder text-white font-size-h1 mb-0 mt-6 d-block">
+						<?= $mahasiswa ?>
+				</span>
+				<span class="font-weight-bold text-white font-size-sm">Jumlah Mahasiswa</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-3">
+		<div class="card card-custom bg-dark card-stretch gutter-b">
+			<div class="card-body">
+				<i class="flaticon2-avatar icon-lg text-white"></i>
+				<span class="card-title font-weight-bolder text-white font-size-h1 mb-0 mt-6 d-block">
+					<?= $dosen ?>
+				</span>
+				<span class="font-weight-bold text-white font-size-sm">Jumlah Dosen</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="alert alert-success mb-5 p-5" role="alert">
     <h4 class="alert-heading">Selamat Datang!</h4>
     <p>Selamat datang <strong><?= $this->session->userdata['name']; ?></strong> di Sistem Informasi Akademik Universitas CKI Indonesia, Anda login sebagai <strong><?= $this->session->userdata['level']; ?></strong>.</p>
-    <div class="border-bottom border-white opacity-20 mb-5"></div>
-    <button href="#" class="btn btn-light mb-0" data-toggle="modal" data-target="#exampleModal">
-		<i class="flaticon-cogwheel-1"></i> Control Panel
-	</button>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="flaticon-cogwheel-1"></i> Control Panel</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i aria-hidden="true" class="ki ki-close"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Mahasiswa</p>
-							<i class="text-success fa fa-user-graduate icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Tahun Akademik</p>
-							<i class="text-success fa fa-calendar-alt icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">KRS</p>
-							<i class="text-success fa fa-edit icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">KHS</p>
-							<i class="text-success fa fa-file-alt icon-4x"></i>
-						</a>
-					</div>
-				</div><hr>
-                <div class="row">
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Input Nilai</p>
-							<i class="text-success fa fa-sort-numeric-down icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Cetak Transkip</p>
-							<i class="text-success fa fa-print icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Kategori</p>
-							<i class="text-success fa fa-list-ul icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Info Kampus</p>
-							<i class="text-success fa fa-bullhorn icon-4x"></i>
-						</a>
-					</div>
-				</div><hr>
-                <div class="row">
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Identitas</p>
-							<i class="text-success fa fa-id-card-alt icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Tentang Kampus</p>
-							<i class="text-success fa fa-info-circle icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Fasilitas</p>
-							<i class="text-success fa fa-laptop icon-4x"></i>
-						</a>
-					</div>
-					<div class="col-md-3 text-info text-center">
-						<a href="<?= base_url() ;?>"><p class="nav-link text-muted">Gallery</p>
-							<i class="text-success fa fa-image icon-4x"></i>
-						</a>
-					</div>
-				</div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+</div> -->
