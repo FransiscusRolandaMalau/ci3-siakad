@@ -11,7 +11,7 @@ class Tahun_akademik_model extends CI_Model
 
     public function get_by_id($id)
     {
-        return $this->db->get_where($this->_table, ['id' => $id])->row();
+        return $this->db->get_where($this->_table, ['id_tahun_akademik' => $id])->row();
     }
 
     public function insert()
@@ -28,17 +28,17 @@ class Tahun_akademik_model extends CI_Model
     public function update()
     {
         $post = $this->input->post();
-        $this->id = $post['id'];
+        $this->id_tahun_akademik = $post['id'];
         $this->tahun_akademik = $post['tahun_akademik'];
         $this->semester = $post['semester'];
         $this->status = $post['status'];
         $this->updated_at = date('Y-m-d H:i:s');
 
-        return $this->db->update($this->_table, $this, array('id' => $post['id']));
+        return $this->db->update($this->_table, $this, array('id_tahun_akademik' => $post['id']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array('id' => $id));
+        return $this->db->delete($this->_table, array('id_tahun_akademik' => $id));
     }
 }

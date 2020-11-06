@@ -26,8 +26,8 @@ class Tahun_akademik extends CI_Controller
         $data[$key][] = $value['tahun_akademik'];
         $data[$key][] = $value['semester'];
         $data[$key][] = ($value['status'] == 1) ? '<span class="label label-primary label-pill label-inline font-weight-bolder">Aktif</span>' : '<span class="label label-danger label-pill label-inline font-weight-bolder">Non Aktif</span>';
-        $data[$key][] = '<a href="'. base_url("/tahun_akademik/edit/").$value['id'].'" class="btn btn-sm btn-clean btn-icon" title="Edit"><i class="la la-edit"></i></a>
-							<a href="'. base_url("/tahun_akademik/destroy/").$value['id'].'" class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="javasciprt: return confirm(\'Are You Sure ?\')"><i class="la la-trash"></i></a>';
+        $data[$key][] = '<a href="'. base_url("/tahun_akademik/edit/").$value['id_tahun_akademik'].'" class="btn btn-sm btn-clean btn-icon" title="Edit"><i class="la la-edit"></i></a>
+							<a href="'. base_url("/tahun_akademik/destroy/").$value['id_tahun_akademik'].'" class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="javasciprt: return confirm(\'Are You Sure ?\')"><i class="la la-trash"></i></a>';
         endforeach;
         $result = array(
             'data' => $data

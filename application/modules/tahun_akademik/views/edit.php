@@ -9,7 +9,7 @@
 </div>
 <div class="card-body">
 	<?= form_open(); ?>
-		<?= form_hidden('id', $tahun_akademik->id); ?>
+		<?= form_hidden('id', $tahun_akademik->id_tahun_akademik); ?>
 		<div class="row">
 			<div class="col-xl-2"></div>
 			<div class="col-xl-8">
