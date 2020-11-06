@@ -97,7 +97,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu-item menu-item-submenu <?= active_link_multiple(array('a', 'prodasi')); ?>" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item menu-item-submenu <?= active_link_multiple(array('krs', 'khs')); ?>" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon-imac"></i>
                         <span class="menu-text">Akademik</span>
@@ -107,7 +107,7 @@
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
                             <li class="menu-item <?= $this->uri->segment(1) == 'krs' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'krs' ;?>" class="menu-link">
+                                <a href="<?= site_url('krs') ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
@@ -115,7 +115,7 @@
                                 </a>
                             </li>
                             <li class="menu-item <?= $this->uri->segment(1) == 'khs' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'khs' ;?>" class="menu-link">
+                                <a href="<?= site_url('khs') ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
