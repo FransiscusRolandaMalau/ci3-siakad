@@ -46,7 +46,7 @@ class Auth extends CI_Controller
             $email = $this->input->post('email');
             $username = $this->input->post('username');
             $password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
-            $created_at = format_indo(date('Y-m-d H:i:s'));
+            $created_at = date('Y-m-d H:i:s');
             $data = [
                 'name' => $name,
                 'email' => $email,
