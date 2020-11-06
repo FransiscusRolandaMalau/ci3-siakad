@@ -83,6 +83,10 @@
 					format: 'yyyy-mm-dd',
 				});
 			});
+			$("#kt_inputmask_4").inputmask({
+				"mask": "9999/9999",
+				placeholder: "" // remove underscores from the input mask
+			});
 		</script>
 		<!--end::Page Vendors-->
 	</body>
