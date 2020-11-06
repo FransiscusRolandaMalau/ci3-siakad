@@ -17,7 +17,7 @@
                     <h4 class="menu-text">Menu Navigation</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 				</li>
-				<li class="menu-item menu-item-submenu <?= active_link_multiple(array('prodi', 'jurusan', 'dosen', 'matakuliah', 'mahasiswa')); ?>" aria-haspopup="true" data-menu-toggle="hover">
+				<li class="menu-item menu-item-submenu <?= active_link_multiple(array('prodi', 'jurusan', 'dosen', 'matakuliah', 'mahasiswa', 'tahun_akademik')); ?>" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-layers-2"></i>
                         <span class="menu-text">Master Data</span>
@@ -27,7 +27,7 @@
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
 							<li class="menu-item <?= $this->uri->segment(1) == 'prodi' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'prodi' ;?>" class="menu-link">
+                                <a href="<?= site_url('prodi') ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
@@ -43,7 +43,7 @@
                                 </a>
 							</li>
 							<li class="menu-item <?= $this->uri->segment(1) == 'mahasiswa' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'mahasiswa' ;?>" class="menu-link">
+                                <a href="<?= site_url('mahasiswa') ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
@@ -56,6 +56,14 @@
                                         <span></span>
                                     </i>
                                     <span class="menu-text">Mata Kuliah</span>
+                                </a>
+                            </li>
+							<li class="menu-item <?= $this->uri->segment(1) == 'tahun_akademik' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
+                                <a href="<?= site_url('tahun_akademik') ;?>" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Data Tahun Akademik</span>
                                 </a>
                             </li>
                         </ul>
@@ -98,14 +106,6 @@
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
-                            <li class="menu-item <?= $this->uri->segment(1) == 'tahun-akademik' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'tahun-akademik' ;?>" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">Data Tahun Akademik</span>
-                                </a>
-                            </li>
                             <li class="menu-item <?= $this->uri->segment(1) == 'krs' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
                                 <a href="<?= site_url().'krs' ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
