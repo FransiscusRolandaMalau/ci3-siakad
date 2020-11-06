@@ -4,44 +4,46 @@ class Matakuliah_model extends CI_Model
 {
     protected $_table = 'matakuliah';
 
-    public function getAll()
+    public function get_all()
     {
-        return $this->db->query("SELECT * FROM matakuliah ORDER BY kode_matakuliah ASC")->result_array();
+        return $this->db->get($this->_table)->result_array();
     }
 
-    public function getIdBy($id)
+    public function get_by_id($id)
     {
-        return $this->db->get_where($this->table, ['kode_matakuliah' => $id])->row();
+        return $this->db->get_where($this->_table, ['id_matakuliah' => $id])->row();
     }
 
     public function insert()
     {
-        $data = array(
-            'kode_matakuliah' => $this->input->post('kode_matakuliah'),
-            'nama_matakuliah' => $this->input->post('nama_matakuliah'),
-            'sks' => $this->input->post('sks'),
-            'semester' => $this->input->post('semester'),
-            'nama_prodi' => $this->input->post('nama_prodi')
-        );
+        $post = $this->input->post();
+        $this->kode_matakuliah = $post['kode_matakuliah'];
+        $this->nama_matakuliah = $post['nama_matakuliah'];
+        $this->sks = $post['sks'];
+        $this->semester = $post['semester'];
+        $this->nama_prodi = $post['nama_prodi'];
+        $this->created_at = date('Y-m-d H:i:s');
 
-        return $this->db->insert($this->table, $data);
+        return $this->db->insert($this->_table, $this);
     }
 
-    public function update($id)
+    public function update()
     {
-        $data = array(
-            'kode_matakuliah' => $this->input->post('kode_matakuliah'),
-            'nama_matakuliah' => $this->input->post('nama_matakuliah'),
-            'sks' => $this->input->post('sks'),
-            'semester' => $this->input->post('semester'),
-            'nama_prodi' => $this->input->post('nama_prodi')
-        );
+        $post = $this->input->post();
 
-        return $this->db->update($this->table, $data, array('kode_matakuliah', $id));
+        $this->id_matakuliah = $post['id'];
+        $this->kode_matakuliah = $post['kode_matakuliah'];
+        $this->nama_matakuliah = $post['nama_matakuliah'];
+        $this->sks = $post['sks'];
+        $this->semester = $post['semester'];
+        $this->nama_prodi = $post['nama_prodi'];
+        $this->updated_at = date('Y-m-d H:i:s');
+
+        return $this->db->update($this->_table, $this, array('id_matakuliah' => $post['id']));
     }
 
     public function delete($id)
     {
-        return $this->db->query("DELETE FROM matakuliah WHERE kode_matakuliah = $id");
+        return $this->db->delete($this->_table, array('id_matakuliah' => $id));
     }
 }

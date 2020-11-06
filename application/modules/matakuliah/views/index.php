@@ -83,6 +83,8 @@
                 <th style="width: 1px;">#</th>
                 <th style="width: 150px;">Kode Mata Kuliah</th>
                 <th>Nama Mata Kuliah</th>
+                <th>SKS</th>
+                <th>Semester</th>
                 <th>Program Studi</th>
                 <th class="action" style="width: 80px;">Actions</th>
             </tr>

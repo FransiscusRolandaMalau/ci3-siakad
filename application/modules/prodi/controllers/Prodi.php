@@ -12,7 +12,7 @@ class Prodi extends CI_Controller
     {
         $data['title'] = 'Program Studi';
         $data['page_header'] = 'Program Studi';
-        $data['content'] = $this->load->view('index', $data, true);
+        $data['content'] = $this->load->view('index', $data, TRUE);
         $this->load->view('template-admin/main-datatables', $data);
     }
 
@@ -42,12 +42,12 @@ class Prodi extends CI_Controller
         $this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required|is_unique[prodi.kode_prodi]');
         $this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
 
-        if ($this->form_validation->run() == true) {
+        if ($this->form_validation->run() == TRUE) {
             $this->prodi_model->insert();
             $this->session->set_flashdata('flash', 'Prodi Berhasil Ditambahkan');
             return redirect(base_url('prodi'));
         } else {
-            $data['content'] = $this->load->view('create', $data, true);
+            $data['content'] = $this->load->view('create', $data, TRUE);
             $this->load->view('template-admin/main-form', $data);
         }
     }
@@ -66,12 +66,12 @@ class Prodi extends CI_Controller
         $this->form_validation->set_rules('kode_prodi', 'Kode Prodi', 'trim|required');
         $this->form_validation->set_rules('nama_prodi', 'Nama Prodi', 'trim|required');
         
-        if ($this->form_validation->run() == true) {
+        if ($this->form_validation->run() == TRUE) {
             $prodi->update($id);
             $this->session->set_flashdata('flash', 'Prodi Berhasil Diperbarui');
             return redirect(base_url('prodi'));
         } else {
-            $data['content'] = $this->load->view('edit', $data, true);
+            $data['content'] = $this->load->view('edit', $data, TRUE);
             $this->load->view('template-admin/main-form', $data);
         }
     }
