@@ -17,7 +17,7 @@
                     <h4 class="menu-text">Menu Navigation</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 				</li>
-				<li class="menu-item menu-item-submenu <?= active_link_multiple(array('prodi', 'jurusan', 'dosen', 'matakuliah')); ?>" aria-haspopup="true" data-menu-toggle="hover">
+				<li class="menu-item menu-item-submenu <?= active_link_multiple(array('prodi', 'jurusan', 'dosen', 'matakuliah', 'mahasiswa')); ?>" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-layers-2"></i>
                         <span class="menu-text">Master Data</span>
@@ -42,6 +42,14 @@
                                     <span class="menu-text">Data Dosen</span>
                                 </a>
 							</li>
+							<li class="menu-item <?= $this->uri->segment(1) == 'mahasiswa' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
+                                <a href="<?= site_url().'mahasiswa' ;?>" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Data Mahasiswa</span>
+                                </a>
+                            </li>
 							<li class="menu-item <?= active_link_controller('matakuliah'); ?>" aria-haspopup="true">
                                 <a href="<?= site_url('matakuliah') ?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
@@ -90,16 +98,6 @@
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
-
-
-                            <li class="menu-item <?= $this->uri->segment(1) == 'mahasiswa' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url().'mahasiswa' ;?>" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">Data Mahasiswa</span>
-                                </a>
-                            </li>
                             <li class="menu-item <?= $this->uri->segment(1) == 'tahun-akademik' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
                                 <a href="<?= site_url().'tahun-akademik' ;?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
