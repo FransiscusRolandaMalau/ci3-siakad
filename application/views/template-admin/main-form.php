@@ -77,6 +77,13 @@
 			}
         });
 		</script>
+		<script type="text/javascript">
+			$(function () {
+				$('.datepicker').datepicker({
+					format: 'yyyy-mm-dd',
+				});
+			});
+		</script>
 		<!--end::Page Vendors-->
 	</body>
 </html>
