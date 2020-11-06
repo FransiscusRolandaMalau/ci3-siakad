@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 70);
+/******/ 	return __webpack_require__(__webpack_require__.s = 60);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTClipboardDemo = function () {\n  // Private 
 
 /***/ }),
 
-/***/ 70:
+/***/ 60:
 /*!*********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/clipboard.js ***!
   \*********************************************************************************/

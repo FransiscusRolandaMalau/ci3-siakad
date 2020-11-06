@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 146);
+/******/ 	return __webpack_require__(__webpack_require__.s = 136);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTBlockUIDemo = function () {\n  // Private fu
 
 /***/ }),
 
-/***/ 146:
+/***/ 136:
 /*!***********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/miscellaneous/blockui.js ***!
   \***********************************************************************************/

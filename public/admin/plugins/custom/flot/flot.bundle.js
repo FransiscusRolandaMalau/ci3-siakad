@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -175,7 +175,7 @@ eval("// Flot- Flot is a pure JavaScript plotting library for jQuery, with a foc
 
 /***/ }),
 
-/***/ 10:
+/***/ 4:
 /*!***********************************************************!*\
   !*** multi ./resources/admin/plugins/custom/flot/flot.js ***!
   \***********************************************************/

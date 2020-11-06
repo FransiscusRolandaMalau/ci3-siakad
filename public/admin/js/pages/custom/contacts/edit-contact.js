@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 99);
+/******/ 	return __webpack_require__(__webpack_require__.s = 89);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTContactsEdit = function () {\n  // Base elem
 
 /***/ }),
 
-/***/ 99:
+/***/ 89:
 /*!*********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/custom/contacts/edit-contact.js ***!
   \*********************************************************************************/

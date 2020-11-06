@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 49);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTFormWidgetsValidation = function () {\n  // Pri
 
 /***/ }),
 
-/***/ 59:
+/***/ 49:
 /*!***************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/validation/form-widgets.js ***!
   \***************************************************************************************/

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 48);
+/******/ 	return __webpack_require__(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTUppy = function () {\n  var Tus = Uppy.Tus;\
 
 /***/ }),
 
-/***/ 48:
+/***/ 38:
 /*!**************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/file-upload/uppy.js ***!
   \**************************************************************************/

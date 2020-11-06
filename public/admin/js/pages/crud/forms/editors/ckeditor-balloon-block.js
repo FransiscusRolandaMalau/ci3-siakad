@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 50);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTCkeditorBalloonBlock = function () {\n  // P
 
 /***/ }),
 
-/***/ 50:
+/***/ 40:
 /*!**********************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/editors/ckeditor-balloon-block.js ***!
   \**********************************************************************************************/

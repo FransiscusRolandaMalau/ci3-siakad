@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 119);
+/******/ 	return __webpack_require__(__webpack_require__.s = 109);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTUserEdit = function () {\n  // Base elements
 
 /***/ }),
 
-/***/ 119:
+/***/ 109:
 /*!**************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/custom/user/edit-user.js ***!
   \**************************************************************************/

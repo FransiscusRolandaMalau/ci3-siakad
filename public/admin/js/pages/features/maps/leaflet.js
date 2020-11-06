@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 145);
+/******/ 	return __webpack_require__(__webpack_require__.s = 135);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTLeaflet = function () {\n  // Private functi
 
 /***/ }),
 
-/***/ 145:
+/***/ 135:
 /*!**************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/maps/leaflet.js ***!
   \**************************************************************************/

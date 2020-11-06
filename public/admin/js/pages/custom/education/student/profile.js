@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 109);
+/******/ 	return __webpack_require__(__webpack_require__.s = 99);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTAppsEducationStudentProfile = function () {\
 
 /***/ }),
 
-/***/ 109:
+/***/ 99:
 /*!*************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/custom/education/student/profile.js ***!
   \*************************************************************************************/

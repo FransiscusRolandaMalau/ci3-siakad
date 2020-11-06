@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 128);
+/******/ 	return __webpack_require__(__webpack_require__.s = 118);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval("\n\nvar KTCalendarBackgroundEvents = function () {\n  return {\n    //main
 
 /***/ }),
 
-/***/ 128:
+/***/ 118:
 /*!****************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/calendar/background-events.js ***!
   \****************************************************************************************/

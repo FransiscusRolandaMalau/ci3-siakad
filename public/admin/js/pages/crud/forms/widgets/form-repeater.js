@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 71);
+/******/ 	return __webpack_require__(__webpack_require__.s = 61);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTFormRepeater = function () {\n  // Private func
 
 /***/ }),
 
-/***/ 71:
+/***/ 61:
 /*!*************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/form-repeater.js ***!
   \*************************************************************************************/

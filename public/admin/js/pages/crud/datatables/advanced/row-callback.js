@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval("\n\nvar KTDatatablesAdvancedColumnVisibility = function () {\n  var _init 
 
 /***/ }),
 
-/***/ 24:
+/***/ 14:
 /*!******************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/datatables/advanced/row-callback.js ***!
   \******************************************************************************************/

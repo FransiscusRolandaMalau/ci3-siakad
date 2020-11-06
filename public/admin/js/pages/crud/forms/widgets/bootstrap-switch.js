@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 67);
+/******/ 	return __webpack_require__(__webpack_require__.s = 57);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTBootstrapSwitch = function () {\n  // Private f
 
 /***/ }),
 
-/***/ 67:
+/***/ 57:
 /*!****************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/bootstrap-switch.js ***!
   \****************************************************************************************/

@@ -95,14 +95,8 @@ require('inputmask/dist/jquery.inputmask.bundle.js');
 require('inputmask/dist/inputmask/inputmask.date.extensions.js');
 require('inputmask/dist/inputmask/inputmask.numeric.extensions.js');
 
-// noUiSlider - is a lightweight range slider with multi-touch support and a ton of features. It supports non-linear ranges, requires no external dependencies: https://refreshless.com/nouislider/
-window.noUiSlider = require('nouislider/distribute/nouislider.js');
-
 // Owl Carousel - Touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider: https://owlcarousel2.github.io/OwlCarousel2/
 require('owl.carousel/dist/owl.carousel');
-
-// The autosize - function accepts a single textarea element, or an array or array-like object (such as a NodeList or jQuery collection) of textarea elements: https://www.jacklmoore.com/autosize/
-window.autosize = require('autosize/dist/autosize.js');
 
 // Clipboard - Copy text to the clipboard shouldn't be hard. It shouldn't require dozens of steps to configure or hundreds of KBs to load: https://clipboardjs.com/
 window.ClipboardJS = require('clipboard/dist/clipboard.min.js');
@@ -111,15 +105,9 @@ window.ClipboardJS = require('clipboard/dist/clipboard.min.js');
 window.Dropzone = require('dropzone/dist/dropzone.js');
 require('../metronic/js/vendors/plugins/dropzone.init.js');
 
-// Quill - is a free, open source WYSIWYG editor built for the modern web. Completely customize it for any need with its modular architecture and expressive API: https://quilljs.com/
-window.Quill = require('quill/dist/quill.js');
-
 // Tagify - Transforms an input field or a textarea into a Tags component, in an easy, customizable way, with great performance and small code footprint, exploded with features: https://github.com/yairEO/tagify
 require('@yaireo/tagify/dist/tagify.polyfills.min');
 window.Tagify = require('@yaireo/tagify/dist/tagify.min');
-
-// Summernote - Super Simple WYSIWYG Editor on Bootstrap Summernote is a JavaScript library that helps you create WYSIWYG editors online: https://summernote.org/
-require('summernote/dist/summernote.js');
 
 // Markdown - A Markdown parser for javascript: https://github.com/evilstreak/markdown-js
 require('markdown/lib/markdown.js');
@@ -134,9 +122,6 @@ require('../metronic/js/vendors/plugins/bootstrap-notify.init.js');
 
 // Toastr - is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended: https://github.com/CodeSeven/toastr
 window.toastr = require('toastr/build/toastr.min.js');
-
-// Dual Listbox - Make your multi select pretty and easy to use with only javascript: https://github.com/maykinmedia/dual-listbox
-window.DualListbox = require('dual-listbox').default;
 
 // Bootstrap Session Timeout - Session timeout and keep-alive control with a nice Bootstrap warning dialog: https://github.com/orangehill/bootstrap-session-timeout
 window.sessionTimeout = require('../metronic/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js');
@@ -156,9 +141,3 @@ require('es6-promise-polyfill/promise.min.js');
 // Sweetalert2 - a beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes: https://sweetalert2.github.io/
 window.Swal = window.swal = require('sweetalert2/dist/sweetalert2.min.js');
 require('../metronic/js/vendors/plugins/sweetalert2.init.js');
-
-// JQuery Repeater - Create a repeatable group of input elements: https://github.com/DubFriend/jquery.repeater
-require('jquery.repeater');
-
-// jsTree - is jquery plugin, that provides interactive trees: https://www.jstree.com/
-require('jstree');

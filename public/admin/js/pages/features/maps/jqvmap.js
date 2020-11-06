@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 143);
+/******/ 	return __webpack_require__(__webpack_require__.s = 133);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTjQVMapDemo = function () {\n  var sample_dat
 
 /***/ }),
 
-/***/ 143:
+/***/ 133:
 /*!*************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/maps/jqvmap.js ***!
   \*************************************************************************/

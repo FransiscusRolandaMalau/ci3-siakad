@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 154);
+/******/ 	return __webpack_require__(__webpack_require__.s = 144);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n// Based on:  https://github.com/rgalus/sticky-js\n\
 
 /***/ }),
 
-/***/ 154:
+/***/ 144:
 /*!*****************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/miscellaneous/sticky-panels.js ***!
   \*****************************************************************************************/

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 60);
+/******/ 	return __webpack_require__(__webpack_require__.s = 50);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTAutosize = function () {\n  // Private function
 
 /***/ }),
 
-/***/ 60:
+/***/ 50:
 /*!********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/autosize.js ***!
   \********************************************************************************/

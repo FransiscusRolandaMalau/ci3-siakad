@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 151);
+/******/ 	return __webpack_require__(__webpack_require__.s = 141);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTKanbanBoardDemo = function () {\n  // Privat
 
 /***/ }),
 
-/***/ 151:
+/***/ 141:
 /*!****************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/miscellaneous/kanban-board.js ***!
   \****************************************************************************************/

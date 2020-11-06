@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 75);
+/******/ 	return __webpack_require__(__webpack_require__.s = 65);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTMaskDemo = function () {\n  // private funct
 
 /***/ }),
 
-/***/ 75:
+/***/ 65:
 /*!***********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/jquery-mask.js ***!
   \***********************************************************************************/

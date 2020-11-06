@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 57);
+/******/ 	return __webpack_require__(__webpack_require__.s = 47);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTTinymce = function () {\n  // Private functi
 
 /***/ }),
 
-/***/ 57:
+/***/ 47:
 /*!*******************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/editors/tinymce.js ***!
   \*******************************************************************************/

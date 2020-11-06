@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 78);
+/******/ 	return __webpack_require__(__webpack_require__.s = 68);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTTagifyDemos = function () {\n  // Private funct
 
 /***/ }),
 
-/***/ 78:
+/***/ 68:
 /*!******************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/tagify.js ***!
   \******************************************************************************/

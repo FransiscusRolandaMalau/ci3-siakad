@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 122);
+/******/ 	return __webpack_require__(__webpack_require__.s = 112);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTWizard2 = function () {\n  // Base elements\
 
 /***/ }),
 
-/***/ 122:
+/***/ 112:
 /*!***************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/custom/wizard/wizard-2.js ***!
   \***************************************************************************/

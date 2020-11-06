@@ -50,9 +50,6 @@
 // Ion Rangeslider - Is an easy, flexible and responsive range slider with tons of options: http://ionden.com/a/plugins/ion.rangeSlider/
 @import "~ion-rangeslider/css/ion.rangeSlider.css";
 
-// noUiSlider - is a lightweight range slider with multi-touch support and a ton of features. It supports non-linear ranges, requires no external dependencies: https://refreshless.com/nouislider/
-@import "~nouislider/distribute/nouislider.css";
-
 // Owl Carousel - Touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider: https://owlcarousel2.github.io/OwlCarousel2/
 @import "~owl.carousel/dist/assets/owl.carousel.css";
 @import "~owl.carousel/dist/assets/owl.theme.default.css";
@@ -60,14 +57,8 @@
 // DropzoneJS -  is an open source library that provides drag'n'drop file uploads with image previews: https://www.dropzonejs.com/
 @import "~dropzone/dist/dropzone.css";
 
-// Quill - is a free, open source WYSIWYG editor built for the modern web. Completely customize it for any need with its modular architecture and expressive API: https://quilljs.com/
-@import "~quill/dist/quill.snow.css";
-
 // Tagify - Transforms an input field or a textarea into a Tags component, in an easy, customizable way, with great performance and small code footprint, exploded with features: https://github.com/yairEO/tagify
 @import "~@yaireo/tagify/src/tagify.scss";
-
-// Summernote - Super Simple WYSIWYG Editor on Bootstrap Summernote is a JavaScript library that helps you create WYSIWYG editors online: https://summernote.org/
-@import "~summernote/dist/summernote.css";
 
 // Bootstrap Markdown - Bootstrap plugin for markdown editing: https://github.com/toopay/bootstrap-markdown
 @import "~bootstrap-markdown/css/bootstrap-markdown.min.css";
@@ -77,9 +68,6 @@
 
 // Toastr - is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended: https://github.com/CodeSeven/toastr
 @import "~toastr/build/toastr.css";
-
-// Dual Listbox - Make your multi select pretty and easy to use with only javascript: https://github.com/maykinmedia/dual-listbox
-@import "~dual-listbox/dist/dual-listbox.css";
 
 // Sweetalert2 - a beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes: https://sweetalert2.github.io/
 @import "~sweetalert2/dist/sweetalert2.css";

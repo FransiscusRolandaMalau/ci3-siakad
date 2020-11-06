@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 61);
+/******/ 	return __webpack_require__(__webpack_require__.s = 51);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTBootstrapDatepicker = function () {\n  var arro
 
 /***/ }),
 
-/***/ 61:
+/***/ 51:
 /*!********************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/bootstrap-datepicker.js ***!
   \********************************************************************************************/

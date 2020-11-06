@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -163,7 +163,7 @@ eval("// JQVMap - JQVMap is a jQuery plugin that renders Interactive, Clickable 
 
 /***/ }),
 
-/***/ 13:
+/***/ 5:
 /*!***************************************************************!*\
   !*** multi ./resources/admin/plugins/custom/jqvmap/jqvmap.js ***!
   \***************************************************************/

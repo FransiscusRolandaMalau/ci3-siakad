@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 46);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTDropzoneDemo = function () {\n  // Private f
 
 /***/ }),
 
-/***/ 46:
+/***/ 36:
 /*!********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/file-upload/dropzonejs.js ***!
   \********************************************************************************/

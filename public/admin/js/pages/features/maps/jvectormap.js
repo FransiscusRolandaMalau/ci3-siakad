@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 144);
+/******/ 	return __webpack_require__(__webpack_require__.s = 134);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTjVectorMap = function () {\n  // Private fun
 
 /***/ }),
 
-/***/ 144:
+/***/ 134:
 /*!*****************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/maps/jvectormap.js ***!
   \*****************************************************************************/

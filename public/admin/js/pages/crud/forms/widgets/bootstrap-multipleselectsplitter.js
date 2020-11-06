@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 65);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("// Class definition\nvar KTBootstrapMultipleSelectsplitter = function () {
 
 /***/ }),
 
-/***/ 65:
+/***/ 55:
 /*!********************************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/widgets/bootstrap-multipleselectsplitter.js ***!
   \********************************************************************************************************/

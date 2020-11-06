@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 47);
+/******/ 	return __webpack_require__(__webpack_require__.s = 37);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTImageInputDemo = function () {\n  // Private
 
 /***/ }),
 
-/***/ 47:
+/***/ 37:
 /*!*********************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/file-upload/image-input.js ***!
   \*********************************************************************************/

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval("\n\nvar KTDatatablesAdvancedFooterCalllback = function () {\n  var _init =
 
 /***/ }),
 
-/***/ 22:
+/***/ 12:
 /*!*********************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/datatables/advanced/footer-callback.js ***!
   \*********************************************************************************************/

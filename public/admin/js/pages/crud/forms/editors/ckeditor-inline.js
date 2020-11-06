@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 54);
+/******/ 	return __webpack_require__(__webpack_require__.s = 44);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTCkeditorInline = function () {\n  // Private
 
 /***/ }),
 
-/***/ 54:
+/***/ 44:
 /*!***************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/crud/forms/editors/ckeditor-inline.js ***!
   \***************************************************************************************/

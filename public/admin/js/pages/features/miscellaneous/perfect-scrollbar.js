@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 152);
+/******/ 	return __webpack_require__(__webpack_require__.s = 142);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTScrollable = function () {\n  // Private fun
 
 /***/ }),
 
-/***/ 152:
+/***/ 142:
 /*!*********************************************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/features/miscellaneous/perfect-scrollbar.js ***!
   \*********************************************************************************************/

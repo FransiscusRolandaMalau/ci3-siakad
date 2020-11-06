@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 97);
+/******/ 	return __webpack_require__(__webpack_require__.s = 87);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,7 +98,7 @@ eval(" // Class definition\n\nvar KTAppChat = function () {\n  var _chatAsideEl;
 
 /***/ }),
 
-/***/ 97:
+/***/ 87:
 /*!*********************************************************************!*\
   !*** multi ./resources/admin/metronic/js/pages/custom/chat/chat.js ***!
   \*********************************************************************/
