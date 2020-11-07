@@ -5,7 +5,8 @@
             <a href="https://github.com/fransiscusrolandamalau" target="_blank" class="text-dark-75 text-hover-primary" rel="noopener">Jakarta, Indonesia</a>
         </div>
         <div class="nav nav-dark">
-            <a href="<?= site_url(); ?>" target="_blank" class="nav-link pl-0 pr-5">Sistem Informasi Akademik</a>
+			<a href="<?= site_url(); ?>" target="_blank" class="nav-link pl-0 pr-5"><div id="displayMoment"></div>
+		</a>
         </div>
     </div>
 </div>

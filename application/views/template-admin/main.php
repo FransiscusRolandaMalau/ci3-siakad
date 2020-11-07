@@ -74,6 +74,16 @@
 
 		<!--begin::Page Vendors(used by this page)-->
 		<script data-pace-options='{ "ajax": false }' src='<?= base_url('node_modules/pace-js/pace.js') ?>'></script>
+		<script type="text/javascript">
+			(function() {
+			// instantiate a moment object
+			var NowMoment = moment().lang("id").format('LLLL');
+			
+			// display value of moment object in #displayMoment div
+			var eDisplayMoment = document.getElementById('displayMoment');
+			eDisplayMoment.innerHTML = NowMoment;
+			})();
+		</script>
 
 		<!--end::Page Vendors-->
 	</body>

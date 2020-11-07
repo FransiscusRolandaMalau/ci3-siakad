@@ -91,6 +91,16 @@
 		})
 	</script>
 	<script type="text/javascript">
+		(function() {
+		// instantiate a moment object
+		var NowMoment = moment().lang("id").format('LLLL');
+		
+		// display value of moment object in #displayMoment div
+		var eDisplayMoment = document.getElementById('displayMoment');
+		eDisplayMoment.innerHTML = NowMoment;
+		})();
+	</script>
+	<script type="text/javascript">
 		<?php if ($this->session->flashdata('flash')) : ?>
 			toastr.options = {
 				"closeButton": false,

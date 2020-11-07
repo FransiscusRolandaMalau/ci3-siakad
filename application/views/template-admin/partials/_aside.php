@@ -68,20 +68,50 @@
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
-							<li class="menu-item <?= $this->uri->segment(1) == 'prodi' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
-                                <a href="<?= site_url('prodi') ;?>" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">Program Studi</span>
-                                </a>
-                            </li>
-                            <li class="menu-item <?= active_link_controller('dosen'); ?>" aria-haspopup="true">
+						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<a href="javascript:;" class="menu-link menu-toggle">
+									<i class="menu-bullet menu-bullet-line">
+										<span></span>
+									</i>
+									<span class="menu-text">Manajemen Users</span>
+									<i class="menu-arrow"></i>
+								</a>
+								<div class="menu-submenu">
+									<i class="menu-arrow"></i>
+									<ul class="menu-subnav">
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/private.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Users Data</span>
+											</a>
+										</li>
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/group.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Roles</span>
+											</a>
+										</li>
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/popup.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Permission</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu-item <?= active_link_controller('dosen'); ?>" aria-haspopup="true">
                                 <a href="<?= site_url('dosen') ?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Data Dosen</span>
+                                    <span class="menu-text">Dosen</span>
                                 </a>
 							</li>
 							<li class="menu-item <?= $this->uri->segment(1) == 'mahasiswa' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
@@ -89,7 +119,15 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Data Mahasiswa</span>
+                                    <span class="menu-text">Mahasiswa</span>
+                                </a>
+                            </li>
+							<li class="menu-item <?= $this->uri->segment(1) == 'prodi' ? 'menu-item-active' : '' ?>" aria-haspopup="true">
+                                <a href="<?= site_url('prodi') ;?>" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Program Studi</span>
                                 </a>
                             </li>
 							<li class="menu-item <?= active_link_controller('matakuliah'); ?>" aria-haspopup="true">
@@ -105,9 +143,9 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Data Tahun Akademik</span>
+                                    <span class="menu-text">Tahun Akademik</span>
                                 </a>
-                            </li>
+							</li>
                         </ul>
                     </div>
 				</li>
@@ -129,7 +167,7 @@
 								</g>
 							</svg>
 						</span>
-                        <span class="menu-text">Master Data Nilai</span>
+                        <span class="menu-text">Laporan</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">

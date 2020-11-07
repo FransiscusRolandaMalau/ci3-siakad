@@ -89,6 +89,16 @@
 				placeholder: "" // remove underscores from the input mask
 			});
 		</script>
+		<script type="text/javascript">
+			(function() {
+			// instantiate a moment object
+			var NowMoment = moment().lang("id").format('LLLL');
+			
+			// display value of moment object in #displayMoment div
+			var eDisplayMoment = document.getElementById('displayMoment');
+			eDisplayMoment.innerHTML = NowMoment;
+			})();
+		</script>
 		<!--end::Page Vendors-->
 	</body>
 </html>
