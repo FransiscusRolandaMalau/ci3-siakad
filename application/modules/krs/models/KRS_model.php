@@ -17,11 +17,9 @@ class KRS_model extends CI_Model
     public function insert()
     {
         $post = $this->input->post();
-        $this->tahun_akademik = $post['tahun_akademik'];
-        $this->semester = $post['semester'];
-        $this->status = $post['status'];
-        $this->created_at = date('Y-m-d H:i:s');
-
+        $this->nim = $post['nim'];
+		$this->tahun_akademik = $post['tahun_akademik'];
+		
         return $this->db->insert($this->_table, $this);
     }
 
@@ -40,5 +38,14 @@ class KRS_model extends CI_Model
     public function delete($id)
     {
         return $this->db->delete($this->_table, array('id_tahun_akademik' => $id));
+    }
+    
+    public function get_tahun_akademik_semester()
+    {
+        $query = $this->db->query("SELECT id_tahun_akademik, semester, CONCAT(tahun_akademik)
+																		AS thn_semester
+																		FROM tahun_akademik");
+                                                                        
+        return $query->result();
     }
 }

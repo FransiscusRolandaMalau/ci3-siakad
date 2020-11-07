@@ -5,15 +5,32 @@ class KRS extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('krs_model');
+        $this->load->model(['krs_model', 'mahasiswa/mahasiswa_model']);
     }
 
     public function index()
     {
         $data['title'] = 'Form Masuk KRS';
         $data['page_header'] = 'Form Masuk Kartu Rencana Studi';
-        $data['content'] = $this->load->view('index', $data, true);
-        $this->load->view('template-admin/main-form', $data);
+        $data['get_tahun_semester'] = $this->krs_model->get_tahun_akademik_semester();
+
+        $this->form_validation->set_rules('nim', 'NIM', 'trim|required');
+        $this->form_validation->set_rules('id_tahun_akademik', 'Tahun Akademik/Semester', 'trim|required');
+
+        if ($this->form_validation->run() == true) {
+            $this->krs_model->insert();
+            $this->session->set_flashdata('flash', 'Tahun Akademik Berhasil Ditambahkan');
+            return redirect(base_url('tahun_akademik'));
+        } else {
+            $data['content'] = $this->load->view('index', $data, true);
+            $this->load->view('template-admin/main-form', $data);
+        }
+        
+        if ($this->mahasiswa_model->request_nim($id) == null) {
+            $this->session->set_flashdata('flash', 'NIM Tidak Ditemukan');
+            $data['content'] = $this->load->view('index', $data, true);
+            $this->load->view('template-admin/main-form', $data);
+        }
     }
 
     public function list_data()
@@ -90,8 +107,8 @@ class KRS extends CI_Controller
             $this->session->set_flashdata('flash', 'Tahun Akademik Berhasil Dihapus');
         } else {
             $this->session->set_flashdata('flash', 'Tahun Akademik Tidak Ditemukan');
-		}
-		
-		return redirect(base_url('tahun_akademik'));
+        }
+        
+        return redirect(base_url('tahun_akademik'));
     }
 }

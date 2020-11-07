@@ -17,21 +17,17 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-3">Semester</label>
+						<label class="col-3">Tahun Akademik/Semester</label>
 						<div class="col-9">
-							<select class="form-control" name="semester" id="semester">
-								<option value="Ganjil">Ganjil</option>
-								<option value="Genap">Genap</option>
+							<select name="id_tahun_akademik" class="form-control" id="kt_select2_1" data-placeholder="--Pilih Tahun Akademik/Semester">
+								<option></option>
+								<?php foreach($get_tahun_semester as $gts) : ?>
+									<option value="<?= $gts->thn_semester . '/' .$gts->semester ;?>">
+										<?= $gts->thn_semester . '/' .$gts->semester ;?>
+									</option>
+								<?php endforeach; ?>
 							</select>
-							<span class="text-danger"><?= form_error('semester'); ?></span>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-3">Tahun Akademik</label>
-						<div class="col-9">
-							<input type="text" class="form-control" name="tahun_akademik" id="kt_inputmask_4" value="<?= set_value('tahun_akademik'); ?>">
-							<span class="form-text text-muted">Format Tahun Akademik: <code>0000/0000</code></span>
-							<span class="text-danger"><?= form_error('tahun_akademik'); ?></span>
+							<span class="text-danger"><?= form_error('id_tahun_akademik'); ?></span>
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary btn-block" value="Simpan">
