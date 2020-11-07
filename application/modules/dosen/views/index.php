@@ -83,10 +83,7 @@
                 <th style="width: 1px;">#</th>
                 <th style="width: 105px;">NIDN</th>
                 <th>Nama Dosen</th>
-                <th>Alamat</th>
-                <th>Jenis Kelamin</th>
                 <th>Email</th>
-                <th>No.Telepon</th>
                 <th>Foto</th>
                 <th class="action" style="width: 80px;">Actions</th>
             </tr>

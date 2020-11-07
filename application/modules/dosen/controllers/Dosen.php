@@ -25,10 +25,7 @@ class Dosen extends CI_Controller
             $data[$key][] = $no++;
         $data[$key][] = $value['nidn'];
         $data[$key][] = $value['nama_dosen'];
-        $data[$key][] = $value['alamat'];
-        $data[$key][] = $value['jenis_kelamin'];
         $data[$key][] = $value['email'];
-        $data[$key][] = $value['telp'];
         $data[$key][] = '<img src="'.base_url('resources/admin/images/upload/dosen').'/'.$value['photo'].'" width="50px">';
         $data[$key][] = '<a href="'. base_url("/dosen/edit").'/'.$value['id_dosen'].'" class="btn btn-sm btn-clean btn-icon" title="Edit"><i class="la la-edit"></i></a>
 							<a href="'. base_url("/dosen/destroy").'/'.$value['id_dosen'].'" class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="javasciprt: return confirm(\'Are You Sure ?\')"><i class="la la-trash"></i></a>';
