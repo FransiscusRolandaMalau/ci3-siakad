@@ -2,7 +2,8 @@
 
 class Mahasiswa_model extends CI_Model
 {
-    protected $_table = 'mahasiswa';
+	protected $_table = 'mahasiswa';
+	public $id = 'nim';
 
     public function get_all()
     {
@@ -10,7 +11,13 @@ class Mahasiswa_model extends CI_Model
         $this->db->from('mahasiswa');
         $this->db->join('prodi', 'prodi.kode_prodi = mahasiswa.nama_prodi');
         return $this->db->get()->result_array();
-    }
+	}
+	
+	public function request_nim($id)
+	{
+		$this->db->where($this->id, $id);
+		return $this->db->get($this->_table, array('nim' => $id))->row();
+	}
 
     public function get_by_id($id)
     {
