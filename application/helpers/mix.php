@@ -1,4 +1,24 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
+
+if (! function_exists('startsWith')) {
+    function startsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        return substr($haystack, 0, $length) === $needle;
+    }
+}
+
+if (! function_exists('endsWith')) {
+    function endsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        if (!$length) {
+            return true;
+        }
+        return substr($haystack, -$length) === $needle;
+    }
+}
+
 if (! function_exists('mix')) {
     /**
      * Get the path to a versioned Mix file.
@@ -15,7 +35,7 @@ if (! function_exists('mix')) {
         $publicFolder = '/public';
         $rootPath = $_SERVER['DOCUMENT_ROOT'];
         $publicPath = $rootPath . $publicFolder;
-        if ($manifestDirectory && ! starts_with($manifestDirectory, '/')) {
+        if ($manifestDirectory && ! startsWith($manifestDirectory, '/')) {
             $manifestDirectory = "/{$manifestDirectory}";
         }
         if (! $manifest) {
@@ -24,7 +44,7 @@ if (! function_exists('mix')) {
             }
             $manifest = json_decode(file_get_contents($manifestPath), true);
         }
-        if (! starts_with($path, '/')) {
+        if (! startsWith($path, '/')) {
             $path = "/{$path}";
         }
         $path = $publicFolder . $path;
