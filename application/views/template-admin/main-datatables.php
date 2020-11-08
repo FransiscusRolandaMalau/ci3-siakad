@@ -91,14 +91,20 @@
 		})
 	</script>
 	<script type="text/javascript">
-		(function() {
-		// instantiate a moment object
-		var NowMoment = moment().lang("id").format('LLLL');
+		var datetime = null,
+		date = null;
+
+		var update = function () {
+			moment.locale('id');
+			date = moment(new Date())
+			datetime.html(date.format('dddd, Do MMMM YYYY, h:mm:ss a'));
+		};
 		
-		// display value of moment object in #displayMoment div
-		var eDisplayMoment = document.getElementById('displayMoment');
-		eDisplayMoment.innerHTML = NowMoment;
-		})();
+		$(document).ready(function(){
+			datetime = $('#wib')
+			update();
+			setInterval(update, 1000);
+		});
 	</script>
 	<script type="text/javascript">
 		<?php if ($this->session->flashdata('flash')) : ?>

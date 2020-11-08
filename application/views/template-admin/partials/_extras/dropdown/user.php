@@ -1,8 +1,11 @@
 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
 	<div class="d-flex align-items-center p-8 rounded-top">
 		<div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-			<img src="<?= base_url() ;?>resources/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>"
-				alt="Profile Images">
+			<?php if ($this->session->userdata['profile_photo']): ?>
+				<img src="<?= base_url(); ?>resources/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
+			<?php else: ?>
+				<?= gravatar($this->session->userdata['email']); ?>
+			<?php endif; ?>
 		</div>
 		<div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5"><?= $this->session->userdata['name']; ?></div>
 	</div>

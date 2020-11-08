@@ -68,44 +68,6 @@
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
-						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-								<a href="javascript:;" class="menu-link menu-toggle">
-									<i class="menu-bullet menu-bullet-line">
-										<span></span>
-									</i>
-									<span class="menu-text">Manajemen Users</span>
-									<i class="menu-arrow"></i>
-								</a>
-								<div class="menu-submenu">
-									<i class="menu-arrow"></i>
-									<ul class="menu-subnav">
-										<li class="menu-item" aria-haspopup="true">
-											<a href="/metronic/demo1/custom/apps/chat/private.html" class="menu-link">
-												<i class="menu-bullet menu-bullet-dot">
-													<span></span>
-												</i>
-												<span class="menu-text">Users Data</span>
-											</a>
-										</li>
-										<li class="menu-item" aria-haspopup="true">
-											<a href="/metronic/demo1/custom/apps/chat/group.html" class="menu-link">
-												<i class="menu-bullet menu-bullet-dot">
-													<span></span>
-												</i>
-												<span class="menu-text">Roles</span>
-											</a>
-										</li>
-										<li class="menu-item" aria-haspopup="true">
-											<a href="/metronic/demo1/custom/apps/chat/popup.html" class="menu-link">
-												<i class="menu-bullet menu-bullet-dot">
-													<span></span>
-												</i>
-												<span class="menu-text">Permission</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</li>
 							<li class="menu-item <?= active_link_controller('dosen'); ?>" aria-haspopup="true">
                                 <a href="<?= site_url('dosen') ?>" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
@@ -145,6 +107,44 @@
                                     </i>
                                     <span class="menu-text">Tahun Akademik</span>
                                 </a>
+							</li>
+							<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<a href="javascript:;" class="menu-link menu-toggle">
+									<i class="menu-bullet menu-bullet-line">
+										<span></span>
+									</i>
+									<span class="menu-text">Manajemen Users</span>
+									<i class="menu-arrow"></i>
+								</a>
+								<div class="menu-submenu">
+									<i class="menu-arrow"></i>
+									<ul class="menu-subnav">
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/private.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Users Data</span>
+											</a>
+										</li>
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/group.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Roles</span>
+											</a>
+										</li>
+										<li class="menu-item" aria-haspopup="true">
+											<a href="/metronic/demo1/custom/apps/chat/popup.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">Permission</span>
+											</a>
+										</li>
+									</ul>
+								</div>
 							</li>
                         </ul>
                     </div>

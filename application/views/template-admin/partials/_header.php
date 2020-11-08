@@ -1,3 +1,4 @@
+
 <div id="kt_header" class="header">
 	<div class="container-fluid d-flex align-items-stretch justify-content-between">
         <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
@@ -32,7 +33,11 @@
 						<span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
 						<span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?= $this->session->userdata['name']; ?></span>
 						<span class="symbol symbol-35 symbol-light-success">
-							<img src="<?= base_url() ;?>resources/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
+							<?php if ($this->session->userdata['profile_photo']): ?>
+								<img src="<?= base_url(); ?>resources/admin/images/avatar/<?= $this->session->userdata['profile_photo']; ?>" alt="Profile Images">
+							<?php else: ?>
+								<?= gravatar($this->session->userdata['email']); ?>
+							<?php endif; ?>
 						</span>
 					</div>
 				</div>
